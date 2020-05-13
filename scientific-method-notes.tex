@@ -1,0 +1,53 @@
+\documentclass{article}
+\input{preamble.tex}
+
+\usepackage[noamsthm,notheorems]{beamerarticle}
+
+\declaretheorem[style=theorem]{theorem}
+\declaretheorem[sibling=theorem]{lemma}
+\declaretheorem[sibling=theorem]{proposition}
+\declaretheorem[style=definition]{definition}
+\declaretheorem[style=definition]{assumption}
+\declaretheorem[style=definition]{example}
+\declaretheorem[style=remark]{remark}
+\declaretheorem[style=solution]{solution}
+\declaretheorem[style=definition]{question}
+\declaretheorem[style=definition]{idea}
+
+\title{%
+  The Scientific Method
+}
+\author{Daniel Bosk}
+\institute[MIUN ICS]{%
+  KTH Royal Institute of Technology,\\
+  School of Electrical Engineering and Computer Science
+  \and
+  Mid Sweden University,\\
+  Department of Information and Communication Systems
+}
+\date{\today}
+
+% XXX the underscores in the logotype filename breaks compilation
+% XXX for some weird reason
+%\pgfdeclareimage[height=0.65cm]{university-logo}{MU_logotyp_int_CMYK.pdf}
+%\logo{\pgfuseimage{university-logo}}
+
+\AtBeginSection[]{%
+  \begin{frame}<beamer>
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+\begin{frame}
+  \titlepage{}
+\end{frame}
+
+\nocite{HowToDesignSecurityExperiments}
+\nocite{SecurityAsAScience}
+
+\mode<all>{\input{contents.tex}}
+
+\printbibliography
+\end{document}
+
