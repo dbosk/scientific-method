@@ -9,9 +9,10 @@
 %   15 and 30 frames, all told.
 
 
-\section{The scientific method}
+\section[Knowledge formation]{To discover new knowledge in security}
 
-\subsection{Deduction}
+\mode<presentation>{%
+\subsection{Overview}
 
 \begin{frame}
   \begin{itemize}
@@ -20,6 +21,114 @@
     \item Both are used, but have different strengths and weaknesses.
   \end{itemize}
 \end{frame}
+}
+
+There are two major schools of gaining new knowledge: deduction and empirical 
+science.
+Generally, it is empirical science that constitutes the scientific method.
+
+Research methods can be divided into two categories: deduction and induction.
+
+\subsection{Induction}
+
+The purpose of induction, or empirical science, is to determine whether a model 
+or theory captures reality.
+
+\begin{frame}
+  \begin{definition}[Induction, hypothesis testing]
+    \begin{enumerate}
+      \item\label{FormHypothesis} Form hypothesis.
+      \item Perform experiment and collect data.
+      \item Analyse data.
+      \item Interpret data and draw conclusion.
+      \item Depending on conclusions, return to~\ref{FormHypothesis}.
+    \end{enumerate}
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  \begin{remark}
+    \begin{itemize}
+      \item There are requirements on the induction process.
+      \item The experiment must test a hypothesis which is both \emph{testable} 
+        and \emph{falsifiable}.
+      \item The experiment must have exactly \emph{one variable}.
+      \item The experiment must be \emph{reproducible} and \emph{results 
+          repeatable}.
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\begin{frame}
+  \begin{example}[Testable and falsifiable]
+    \begin{itemize}
+      \item Implies observability and measurability.
+      \item Hypothesis: Prayer increases contact with one's deity.
+      \item Not falsifiable: We cannot observe divine communication, no 
+        experiment could prove the result wrong.
+    \end{itemize}
+  \end{example}
+
+  \pause
+
+  \begin{example}[Testable and falsifiable]
+    \begin{itemize}
+      \item Hypothesis: This software is secure.
+      \item Not measurable: What is secure?
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+\subsection{Quantitative and qualitative observations}
+
+\begin{frame}
+  \begin{definition}[Quantitative methods]
+    \begin{itemize}
+      \item Explores things that can be objectively quantified.
+      \item \Eg measuring time, length, weight, cardinality.
+    \end{itemize}
+  \end{definition}
+
+  \begin{definition}[Qualitative methods]
+    \begin{itemize}
+      \item Explores things that are qualitative (subjective) --- cannot be 
+        quantified.
+      \item Used to explore phenomena in-depth.
+      \item Especially useful for finding direction in usability research.
+    \end{itemize}
+  \end{definition}
+\end{frame}
+
+\begin{frame}
+  \begin{example}
+    \begin{itemize}
+      \item We've designed two interfaces and want to compare how good they 
+        are.
+
+      \item \emph{Quantitatively}: we measure the time it takes for people to 
+        finish a task in both interfaces.
+
+      \item \emph{Qualitatively}: we interview people about what they think of 
+        each of the interfaces.
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+\begin{frame}
+  \begin{remark}
+    \begin{itemize}
+      \item The quantitative results allow us to determine which of the two 
+        interfaces is the best.
+
+      \item The qualitative results allows us to extract what is good about the 
+        interfaces.
+
+      \item Thus we can potentially construct a third, much better, interface.
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\subsection{Deduction}
 
 \begin{frame}
   \begin{definition}[Deduction]
@@ -118,108 +227,71 @@
   \end{remark}
 \end{frame}
 
-\subsection{Induction}
-
-\begin{frame}
-  \begin{definition}[Induction, hypothesis testing]
-    \begin{enumerate}
-      \item\label{FormHypothesis} Form hypothesis.
-      \item Perform experiment and collect data.
-      \item Analyse data.
-      \item Interpret data and draw conclusion.
-      \item Depending on conclusions, return to~\ref{FormHypothesis}.
-    \end{enumerate}
-  \end{definition}
-\end{frame}
-
-\begin{frame}
-  \begin{remark}
-    \begin{itemize}
-      \item There are requirements on the induction process.
-      \item The experiment must test a hypothesis which is both \emph{testable} 
-        and \emph{falsifiable}.
-      \item The experiment must have exactly \emph{one variable}.
-      \item The experiment must be \emph{reproducible} and \emph{results 
-          repeatable}.
-    \end{itemize}
-  \end{remark}
-\end{frame}
-
-\begin{frame}
-  \begin{example}[Testable and falsifiable]
-    \begin{itemize}
-      \item Implies observability and measurability.
-      \item Hypothesis: Prayer increases contact with one's deity.
-      \item Not falsifiable: We cannot observe divine communication, no 
-        experiment could prove the result wrong.
-    \end{itemize}
-  \end{example}
-
-  \pause
-
-  \begin{example}[Testable and falsifiable]
-    \begin{itemize}
-      \item Hypothesis: This software is secure.
-      \item Not measurable: What is secure?
-    \end{itemize}
-  \end{example}
-\end{frame}
-
-\subsection{Quantitative and qualitative methods}
-
-\begin{frame}
-  \begin{definition}[Quantitative methods]
-    \begin{itemize}
-      \item Explores things that can be objectively quantified.
-      \item \Eg measuring time, length, weight, cardinality.
-    \end{itemize}
-  \end{definition}
-
-  \begin{definition}[Qualitative methods]
-    \begin{itemize}
-      \item Explores things that are qualitative (subjective) --- cannot be 
-        quantified.
-      \item Used to explore phenomena in-depth.
-      \item Especially useful for finding direction in usability research.
-    \end{itemize}
-  \end{definition}
-\end{frame}
+\subsection{The problem of deductive inquiry}
 
 \begin{frame}
   \begin{example}
     \begin{itemize}
-      \item We've designed two interfaces and want to compare how good they 
-        are.
-
-      \item \emph{Quantitatively}: we measure the time it takes for people to 
-        finish a task in both interfaces.
-
-      \item \emph{Qualitatively}: we interview people about what they think of 
-        each of the interfaces.
+      \item Use the standard algorithms for addition and multiplication (using 
+        the binary number system).
+      \item Give any number to an algorithm \(A\).
+      \item \(A\) will multiply your number by a secret value \(x\).
+      \item Can you tell the difference between \(x = 3\) or \(x = 7\)?
     \end{itemize}
   \end{example}
 \end{frame}
 
 \begin{frame}
+  \begin{itemize}
+    \item Assume that we give the number \(25\) as our challenge to \(A\).
+    \item Looking at the numbers we have we see that \(3_{10} = 11_2\), 
+      \(7_{10} = 111_2\) and \(25_{10} = 11001_2\)
+
+    \item Assume each step in the algorithm takes one time unit.
+
+    \item Then \(11001\times 11\) will take \(17\) time units:
+      \begin{itemize}
+        \item \(5\) time units for multiplying the last \(1\) in \(11\) with 
+          each digit in \(11001\),
+
+        \item another \(5\) time units for the next digit in \(11\),
+
+        \item we have an additional \(1\) time unit for shifting the second 
+          result one step,
+
+        \item finally, we get \(6\) time units for adding the numbers.
+      \end{itemize}
+
+    \item \(11001\times 111\) will take \(24\) time units:
+      \begin{itemize}
+        \item \(5\) time units for each digit, hence \(15\) in total,
+
+        \item we have two shifts, thus \(2\) time units more,
+
+        \item finally we have \(7\) time units for adding.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \begin{remark}
     \begin{itemize}
-      \item The quantitative results allow us to determine which of the two 
-        interfaces is the best.
+      \item The first multiplication takes \(17\) time units to perform,
+        the second takes \(24\) time units.
 
-      \item The qualitative results allows us to extract what is good about the 
-        interfaces.
-
-      \item Thus we can potentially construct a third, much better, interface.
+      \item This is one example of why \emph{constant-time operations} are 
+        desirable.
     \end{itemize}
   \end{remark}
+
+  \pause
+
+  \begin{exercise}
+    \begin{itemize}
+      \item Can we see the difference between \(x = 2_{10} = 10_2\) and \(x = 
+          3_{10} = 11_2\)?
+    \end{itemize}
+  \end{exercise}
 \end{frame}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[allowframebreaks]
-  \small
-  \printbibliography
-\end{frame}
 
