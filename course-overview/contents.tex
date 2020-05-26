@@ -1,0 +1,342 @@
+\title{%
+  A Science of Security Course
+}
+\author{Daniel Bosk}
+\institute{%
+  KTH EECS, \email{dbosk@kth.se}
+}
+
+\mode<article>{\maketitle}
+\mode<presentation>{%
+  \begin{frame}
+    \maketitle
+  \end{frame}
+}
+
+\mode*
+
+\begin{abstract}
+  \input{abstract.tex}
+\end{abstract}
+
+
+\section{Introduction}
+
+\subsection{The origin of the problem}
+
+\begin{frame}
+  \blockcquote{Anonymous}{%
+    Sure, I know the methods I've used in my papers, but I don't feel 
+    particularly like a scientist.%
+  }
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    What makes my work scientific?
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \fullcite{SecurityAsAScience}
+\end{frame}
+
+\begin{frame}
+  \begin{remark}[This is a problem]
+    \begin{itemize}
+      \item The community itself is in disagreement on 
+        this~\cite{SecurityAsAScience}.
+      \item This will be very confusing when entering the field.
+    \end{itemize}
+  \end{remark}
+
+  \pause
+
+  \begin{example}[According to some]
+    \begin{itemize}
+      \item Cryptography isn't science.
+      \item But provable security is.
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+
+\subsection{The goal}
+
+\begin{frame}
+  \begin{block}{The goal}
+    \begin{itemize}
+      \item Give a holistic view of Science of Security.
+
+        \pause
+
+      \item Where are the disputes and why?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{example}[\enquote{Provable security}]
+    \begin{itemize}
+      \item A uniformly random string of length \(n\) is the most secure 
+        password.
+      \item We can prove it will take millions of years to guess it.
+    \end{itemize}
+  \end{example}
+
+  \pause
+
+  \begin{remark}
+    \begin{itemize}
+      \item Attackers still get in, strange.
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\begin{frame}
+  \begin{example}[Usability]
+    \begin{itemize}
+      \item Turns out people can't handle uniformly random passwords.
+      \item With a unique such password for every service.
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+
+
+\section{Concrete suggestion}
+
+\subsection{Contents}
+
+\begin{frame}
+  \begin{block}{Contents, part I}
+    \begin{enumerate}
+      \item Philosophy of Science of Security
+      \item Purely deductive methods
+      \item[\vdots]
+      \item[n] Purely inductive methods
+    \end{enumerate}
+  \end{block}
+
+  \pause
+
+  \begin{remark}[What to focus]
+    \begin{itemize}
+      \item What makes a method scientific?
+      \item How do these play together? (The holistic aspect.)
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\begin{frame}
+  \begin{example}[Philosophy of Science of Security]
+    \begin{itemize}
+      \item Start with a discussion of 
+        \citetitle{SecurityAsAScience}\footfullcite{SecurityAsAScience}.
+      \item What is Science of Security?
+      \item Does that even exist at the moment?
+      \item What are the problems?
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+\begin{example}[Deductive inquiry]
+  \begin{example}
+    \begin{itemize}
+      \item What are the limitations?
+      \item Can this be science on its own?
+      \item Or does it require a combination of application and further study 
+        to form something scientific?
+    \end{itemize}
+  \end{example}
+\end{example}
+
+\begin{frame}
+  \begin{block}{Contents, part II}
+    \begin{itemize}
+      \item General introductions to various subfields.
+      \item Which methods are used and why?
+      \item Some exemplary papers?
+      \item How does a subfield fit into the holistic picture of Security?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{remark}
+    \begin{itemize}
+      \item All above was top down: faculty\footnote{%
+          From different subfields.
+        } present their view on
+        \begin{itemize}
+          \item the methodologies,
+          \item the practices,
+          \item the adversary models,
+          \item the assumptions,
+          \item the relation to scientific approach in their respective 
+            subfield.
+        \end{itemize}
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Bottom up}
+    \begin{itemize}
+      \item Course participants review the scientific merits of 
+        papers\footnote{%
+          Chosen by subfield designer, not participants.
+        } from top conferences in the subfield.
+
+      \item They identify/reverse engineer methodology and components of 
+        evaluation.
+
+      \item They value why this is scientific and how and what knowledge it 
+        contributes.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Learning objectives}
+    Should be able to
+    \begin{itemize}
+      \item choose an appropriate method of inquiry to answer a given research 
+        question in the field of Security.
+
+      \item assess how a paper contributes to the advancement of the field of 
+        Security.
+
+      \item evaluate the choice of methodology in a given paper.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+  \begin{block}{Assessment}
+    \begin{itemize}
+      \item Apply subfield methodology from bottom-up and top-down
+        insights to own paper.
+
+      \item Reflect on how this paper fits in the big picture of Security as a 
+        science.
+
+      \item Discussion/reflection on limits of how scientific security research 
+        can be; \eg provability versus complexity of actual systems, 
+        engineering versus science.
+
+      \item Peer-review (among course participants) these individual 
+        papers\footnote{%
+          Or a paper in progress or already published paper.
+        } to identify gaps in the scientific approach that could be filled.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{Format}
+
+\begin{frame}
+  \begin{idea}
+    \begin{itemize}
+      \item Develop material jointly.
+      \item Design as MOOC.
+      \item This allows us to
+        \begin{itemize}
+          \item each run the course locally when we have new students, or
+          \item run it jointly in relation to the SWITS seminar, and
+          \item reuse parts of the material in other courses too.
+        \end{itemize}
+    \end{itemize}
+  \end{idea}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Teaching material}
+    \begin{itemize}
+      \item Develop material jointly (video lectures, exercises \etc).
+      \item Each research group is specialized on a part of the Science of 
+        Security methodology.
+
+      \item Use tools that bridge the social aspects over time and space:
+        \eg Perusall.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Giving the course}
+    \begin{enumerate}
+      \item Give the course in relation to SWITS every year.
+      \item Each faculty member can do assessment of their students locally, 
+        \ie give it any time.
+    \end{enumerate}
+  \end{block}
+
+  \pause
+
+  \begin{remark}[Administration]
+    \begin{enumerate}
+      \item One host institution, others do credit transfer?
+      \item Each institution has their own syllabus, course code \etc?
+      \item Split into small modules, different institutions responsible for 
+        each?
+    \end{enumerate}
+  \end{remark}
+\end{frame}
+
+
+\section{Discussion}
+
+\begin{frame}
+  \begin{center}
+    Comments, questions?
+  \end{center}
+\end{frame}
+
+
+%%% REFERENCES %%%
+
+\begin{frame}[allowframebreaks]
+  \printbibliography
+\end{frame}
+
+
+
+\mode<all>{\endinput}
+
+
+
+\begin{frame}
+  \begin{itemize}
+    \item \cite[\S\S 4--5]{SecurityAsAScience}
+  \end{itemize}
+\end{frame}
+
+\dots
+
+\begin{frame}
+  \begin{itemize}
+    \item \textcquote{SecurityAsAScience}
+      {We find that aspects from the philosophy of science on which most other 
+        communities have reached consensus appear surprisingly little used in 
+      security.}
+
+    \item \textcquote{SecurityAsAScience}{%
+        A significant component of security is engineering; this shares with 
+        science the regular contact with, and feedback from, observation, 
+        despite not having as clearly articulated definition or methods.%
+      }
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item \textcquote{SecurityAsAScience}{%
+        Probably the most significant settled point in the philosophy of 
+        science is that inductive and deductive statements constitute different 
+        types of knowledge claims.%
+      }
+  \end{itemize}
+\end{frame}
+
+
