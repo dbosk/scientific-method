@@ -1,5 +1,5 @@
 .PHONY: all
-all: notes.pdf slides.pdf
+all: slides.pdf #notes.pdf
 
 SRC+=		preamble.tex
 SRC+=		abstract.tex contents.tex
