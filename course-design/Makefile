@@ -12,13 +12,9 @@ slides.pdf: slides.tex
 slides.pdf: ${SRC}
 
 
-bibliography.bib: bibliography.bib(../methods-overview/scientific-method.bib)
-
-
 .PHONY: clean
 clean:
 	${RM} notes.pdf slides.pdf
-	${RM} bibliography.bib
 
 
 INCLUDE_MAKEFILES=../makefiles
