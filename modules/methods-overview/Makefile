@@ -23,5 +23,5 @@ clean:
 	${RM} scientific-method.pdf reading.md
 
 
-INCLUDE_MAKEFILES=../makefiles
+INCLUDE_MAKEFILES=../../makefiles
 include ${INCLUDE_MAKEFILES}/tex.mk
