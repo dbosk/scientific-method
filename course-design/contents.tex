@@ -1,5 +1,5 @@
 \title{%
-  A Science of Security Course, Revisited
+  A Science of Security Course: An Overview
 }
 \author{Daniel Bosk}
 \institute{%
@@ -19,31 +19,21 @@
   \input{abstract.tex}
 \end{abstract}
 
+\clearpage
+\tableofcontents
+\clearpage
 
 \section{Overview}
 
-\subsection{Previously on SWITS}
+\mode<presentation>{\subsection{The goal}}
 
 \begin{frame}
-  \begin{block}{SWITS 2020}
-    \begin{itemize}
-      \item Talk: A Science of Security Course
-    \end{itemize}
-  \end{block}
-
-  \pause
-
   \begin{block}{The goal}
     \begin{itemize}
       \item Give a holistic view of Science of Security.
       \item What are the methods we use and why?
-      \item Where are the disputes, philosophical problems and why?
     \end{itemize}
   \end{block}
-\end{frame}
-
-\begin{frame}
-  \fullcite{SecurityAsAScience}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -74,28 +64,7 @@
   \end{question}
 \end{frame}
 
-\subsection{A master's programme}
-
-\begin{frame}[fragile]
-  \begin{block}{MSc Cybersecurity}
-    \begin{description}
-      \item[Programme co-ordinators] Sonja Buchegger and Mathias Ekstedt
-      \item[Started] Autumn 2022
-      \item[First round of theses] Spring 2024
-    \end{description}
-  \end{block}
-\end{frame}
-
 \begin{frame}
-  \begin{remark}
-    \begin{itemize}
-      \item My previous experience of master students is that their skills 
-        leave some things to be desired.
-    \end{itemize}
-  \end{remark}
-
-  \pause
-
   \begin{block}{Aim of Science of Security course}
     \begin{itemize}
       \item Complement the general methods course.
@@ -117,124 +86,63 @@
       security of these systems
     \item<+> apply scientific methodology to show how to answer issues in the 
       cybersecurity field
+    \mode<presentation>{%
     \item<+> \dots
-%    \item<+> plan and carry out assignments within given time frames and 
-%      available resources
-%    \item<+> write short, clear and arguing texts based on own analysis as well 
-%      as given material.
+    }
+    \mode<article>{%
+    \item<+> plan and carry out assignments within given time frames and 
+      available resources
+    \item<+> write short, clear and arguing texts based on own analysis as well 
+      as given material.
+    }
   \end{itemize}
   in order to be able to contribute to scientifically based development.
 \end{frame}
 
 \begin{frame}[fragile]
-  \footnotesize
-  \begin{columns}[t]
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{Master's goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate knowledge and understanding \textelp{} as well as 
-            insight into current research and development work, and
-          \item demonstrate specialised methodological knowledge in the main 
-            field of study.
-          \item demonstrate the ability to critically and systematically 
-            integrate knowledge and analyse, assess and deal with complex 
-            phenomena, issues and situations even with limited information
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{PhD goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate familiarity with research methodology in general 
-            and the methods of the specific field of research in particular.
-          \item demonstrate the capacity for scholarly analysis and synthesis as 
-            well as to review and assess new and complex phenomena, issues and 
-            situations autonomously and critically
-        \end{itemize}
-      \end{block}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]
-  \footnotesize
-  \begin{columns}[t]
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{Master's goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate the ability to identify and formulate issues 
-            critically, autonomously and creatively as well as to plan and, 
-            using appropriate methods, undertake advanced tasks \textelp{} and 
-            so contribute to the formation of knowledge as well as the ability 
-            to evaluate this work
-          \item demonstrate the ability \textelp{} to plan and, using 
-            appropriate methods, undertake advanced tasks \textelp{} and so 
-            contribute to the formation of knowledge as well as the ability to 
-            evaluate this work
-          \item demonstrate the skills required for participation in research
-            \textelp{}
-            %and development work \textelp{}
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{PhD goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate the ability to identify and formulate issues with 
-            scholarly precision critically, autonomously and creatively, and to 
-            plan and use appropriate methods to undertake research and other 
-            qualified tasks within predetermined time frames and to review and 
-            evaluate such work
-        \end{itemize}
-      \end{block}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]
-  \footnotesize
-  \begin{columns}[t]
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{Master's goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate the ability to make assessments in the main field 
-            of study informed by relevant disciplinary, social and ethical 
-            issues and also to demonstrate awareness of ethical aspects of 
-            research and development work
-          \item demonstrate insight into the possibilities and limitations of 
-            research, \textelp{}
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{PhD goals~\cite{HEO2}}
-        \begin{itemize}
-          \item demonstrate intellectual autonomy and disciplinary rectitude as 
-            well as the ability to make assessments of research ethics, and
-          \item demonstrate specialised insight into the possibilities and 
-            limitations of research, its role in society and the responsibility 
-            of the individual for how it is used.
-        \end{itemize}
-      \end{block}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]
-  \begin{block}{Conclusion goals}
+  \begin{block}{Master's goals: Knowledge and understanding~\cite{HEO2}}
     \begin{itemize}
-      \item The goals are very similar.
-      \item It's \enquote{just} a matter of progression.
+      \item demonstrate knowledge and understanding \textelp{} as well as 
+        insight into current research and development work, and
+      \item demonstrate specialised methodological knowledge in the main 
+        field of study.
+      \item demonstrate the ability to critically and systematically 
+        integrate knowledge and analyse, assess and deal with complex 
+        phenomena, issues and situations even with limited information
     \end{itemize}
   \end{block}
+\end{frame}
 
-  \begin{remark}
+\begin{frame}[fragile]
+  \begin{block}{Master's goals: Competence and skills~\cite{HEO2}}
     \begin{itemize}
-      \item Even not adapted to PhD students, it would be a boost towards the 
-        goals of the PhD degree.
-      \item (Based on the 2020 discussion.)
+      \item demonstrate the ability to identify and formulate issues 
+        critically, autonomously and creatively as well as to plan and, 
+        using appropriate methods, undertake advanced tasks \textelp{} and 
+        so contribute to the formation of knowledge as well as the ability 
+        to evaluate this work
+      \item demonstrate the ability \textelp{} to plan and, using 
+        appropriate methods, undertake advanced tasks \textelp{} and so 
+        contribute to the formation of knowledge as well as the ability to 
+        evaluate this work
+      \item demonstrate the skills required for participation in research
+        \textelp{}
+        %and development work \textelp{}
     \end{itemize}
-  \end{remark}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \begin{block}{Master's goals: Judgement and approach~\cite{HEO2}}
+    \begin{itemize}
+      \item demonstrate the ability to make assessments in the main field 
+        of study informed by relevant disciplinary, social and ethical 
+        issues and also to demonstrate awareness of ethical aspects of 
+        research and development work
+      \item demonstrate insight into the possibilities and limitations of 
+        research, \textelp{}
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
