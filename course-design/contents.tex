@@ -1,7 +1,11 @@
 \title{%
   A Science of Security Course: An Overview
 }
-\author{Daniel Bosk}
+\author{Daniel Bosk\thanks{%
+    This material was authored by Daniel Bosk and is available under the 
+    Creative Commons Attribution-ShareAlike (CC-BY-SA) 4.0 international 
+    license.
+}}
 \institute{%
   KTH EECS, \email{dbosk@kth.se}
 }
@@ -25,9 +29,18 @@
 
 \section{Overview}
 
-\mode<presentation>{\subsection{The goal}}
+\only<presentation>{\subsection{The goal}}
+
+The goal of the course is to give a holistic view of the Science of Security.
+We want to answer the following question:
 
 \begin{frame}
+  \begin{question}
+    What are the methods we (in the security community) use and why?
+  \end{question}
+\end{frame}
+
+\begin{frame}<presentation>
   \begin{block}{The goal}
     \begin{itemize}
       \item Give a holistic view of Science of Security.
@@ -36,8 +49,12 @@
   \end{block}
 \end{frame}
 
+This is a tricky question to answer, because there are some apparent problems 
+with the scientificity in the security area.
+Consider the following examples.
+
 \begin{frame}[fragile]
-  \begin{example}
+  \begin{example}\label{SoKProblem1}
       \textcquote[\S IV]{SecurityAsAScience}{\textins*{C}laims of necessary 
         conditions for real-world security are unfalsifiable.
       Claims of necessary conditions for formally-defined security are 
@@ -46,7 +63,7 @@
 
   \pause
 
-  \begin{example}
+  \begin{example}\label{SoKProblem2}
     \textcquote{SecurityAsAScience}{%
       Unfalsifiable claims are common in security---and they, along with circular 
       arguments, are used to justify many defensive measures \textelp{}
@@ -56,15 +73,15 @@
   \end{example}
 \end{frame}
 
+This leads us to the second question, we want the students to able to answer:
+
 \begin{frame}
   \begin{question}
-    \begin{itemize}
-      \item What makes my work scientific?
-    \end{itemize}
+    What makes my work (in security) scientific?
   \end{question}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<presentation>
   \begin{block}{Aim of Science of Security course}
     \begin{itemize}
       \item Complement the general methods course.
@@ -75,82 +92,164 @@
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]
-  After passing the course, the student should be able to
-  \begin{itemize}
-    \item<+> relate the different parts of scientific method, how they relate 
-      to one another, contribute and not contribute to scientificity in 
-      security
-    \item<+> assess, analyse, and discuss the quality in, and ethical aspects 
-      of, knowledge generation related to digital systems and in particular the 
-      security of these systems
-    \item<+> apply scientific methodology to show how to answer issues in the 
-      cybersecurity field
-    \mode<presentation>{%
-    \item<+> \dots
-    }
-    \mode<article>{%
-    \item<+> plan and carry out assignments within given time frames and 
-      available resources
-    \item<+> write short, clear and arguing texts based on own analysis as well 
-      as given material.
-    }
-  \end{itemize}
-  in order to be able to contribute to scientifically based development.
-\end{frame}
+\only<article>{\subsection{Goals and requirements}}
 
+Now the aim of the course is to complement the general scientific methods 
+course.
+Due to the complexity of security problems and the field's interdisciplinary 
+composition, we want to emphasise on how the methods fit together in the field.
+We find this particularly necessary after reading the quotes in 
+\cref{SoKProblem1,SoKProblem2}.
+
+The requirements for Master's level are set out in 
+\citetitle{HEO2}~\cite{HEO2}, namely:
 \begin{frame}[fragile]
   \begin{block}{Master's goals: Knowledge and understanding~\cite{HEO2}}
-    \begin{itemize}
-      \item demonstrate knowledge and understanding \textelp{} as well as 
-        insight into current research and development work, and
-      \item demonstrate specialised methodological knowledge in the main 
-        field of study.
-      \item demonstrate the ability to critically and systematically 
+    \only<article>{\begin{enumerate}[label={(K\arabic*)},ref=K\arabic*]}
+    \only<presentation>{\begin{itemize}}
+      \item\label{K1} demonstrate knowledge and understanding \textelp{} as 
+        well as insight into current research and development work, and
+      \item\label{K2} demonstrate specialised methodological knowledge in the 
+        main field of study.
+      \item\label{K3} demonstrate the ability to critically and systematically 
         integrate knowledge and analyse, assess and deal with complex 
         phenomena, issues and situations even with limited information
-    \end{itemize}
+    \only<article>{\end{enumerate}}
+    \only<presentation>{\end{itemize}}
   \end{block}
 \end{frame}
 
 \begin{frame}[fragile]
   \begin{block}{Master's goals: Competence and skills~\cite{HEO2}}
-    \begin{itemize}
-      \item demonstrate the ability to identify and formulate issues 
-        critically, autonomously and creatively as well as to plan and, 
-        using appropriate methods, undertake advanced tasks \textelp{} and 
-        so contribute to the formation of knowledge as well as the ability 
+    \only<article>{\begin{enumerate}[label={(C\arabic*)},ref=C\arabic*]}
+    \only<presentation>{\begin{itemize}}
+      \item\label{C1} demonstrate the ability to identify and formulate issues 
+        critically, autonomously and creatively as well as to plan and, using 
+        appropriate methods, undertake advanced tasks
+        \only<presentation>{\textelp{}}%
+        \only<article>{within predetermined time frames}
+        and so contribute to the formation of knowledge as well as the ability 
         to evaluate this work
-      \item demonstrate the ability \textelp{} to plan and, using 
-        appropriate methods, undertake advanced tasks \textelp{} and so 
-        contribute to the formation of knowledge as well as the ability to 
-        evaluate this work
-      \item demonstrate the skills required for participation in research
-        \textelp{}
-        %and development work \textelp{}
-    \end{itemize}
+      \item\label{Ccomm} demonstrate the ability in speech and writing both 
+        nationally and internationally to clearly report and discuss his or her 
+        conclusions and the knowledge and arguments on which they are based in 
+        dialogue with different audiences, and
+      \item\label{C2} demonstrate the skills required for participation in 
+        research and development work \textelp{}
+    \only<presentation>{\end{itemize}}
+    \only<article>{\end{enumerate}}
   \end{block}
 \end{frame}
 
 \begin{frame}[fragile]
   \begin{block}{Master's goals: Judgement and approach~\cite{HEO2}}
-    \begin{itemize}
-      \item demonstrate the ability to make assessments in the main field 
-        of study informed by relevant disciplinary, social and ethical 
-        issues and also to demonstrate awareness of ethical aspects of 
-        research and development work
-      \item demonstrate insight into the possibilities and limitations of 
-        research, \textelp{}
-    \end{itemize}
+    \only<article>{\begin{enumerate}[label={(J\arabic*)},ref=J\arabic*]}
+    \only<presentation>{\begin{itemize}}
+      \item\label{J1} demonstrate the ability to make assessments in the main 
+        field of study informed by relevant disciplinary, social and ethical 
+        issues and also to demonstrate awareness of ethical aspects of research 
+        and development work
+      \item\label{J2} demonstrate insight into the possibilities and 
+        limitations of research, \textelp{}
+    \only<presentation>{\end{itemize}}
+    \only<article>{\end{enumerate}}
   \end{block}
 \end{frame}
+
+\paragraph{Intended learning outcomes}\label{LearningOutcomes}
+
+\begin{frame}[fragile]
+  \only<article>{In summary, the learning outcomes, we want that after}%
+  \only<presentation>{After}%
+  passing the course, the student should be able to
+  \only<article>{\begin{enumerate}[label={(LO\arabic*)},ref=LO\arabic*]}
+  \only<presentation>{\begin{itemize}}
+    \item\label{LOrelate} relate the different parts of scientific method, how 
+      they relate to one another, contribute and not contribute to 
+      scientificity in security
+      \only<article>{[\ref{K1}, \ref{K2}, \ref{J2}]}
+    \item\label{LOevaluate} assess, analyse, and discuss the quality in, and 
+      ethical aspects of, knowledge generation related to digital systems and 
+      in particular the security of these systems
+      \only<article>{[\ref{C1}, \ref{C2}, \ref{J1}, \ref{K3}]}
+    \item\label{LOapply} apply scientific methodology to show how to answer 
+      issues in the cybersecurity field
+      \only<article>{[\ref{C1}, \ref{C2}]}
+    \only<presentation>{%
+    \item \dots
+    }
+    \only<article>{%
+    \item\label{LOplan} plan and carry out assignments within given time frames 
+      and available resources [\ref{C1}]
+    \item\label{LOcomm} write short, clear and arguing texts based on own 
+      analysis as well as given material.
+      \only<article>{[\ref{K3}, \ref{Ccomm}]}
+    }
+  \only<presentation>{\end{itemize}}
+  \only<article>{\end{enumerate}}
+  in order to be able to contribute to scientifically based development.
+\end{frame}
+
+\subsection{Prerequisites}
+
+The course requires some prerequisites.
+In the area of cybersecurity, the student should be able to:
+\begin{itemize}
+  \item identify threats against confidentiality, integrity and availability in 
+    digital systems
+  \item explain basic terminology and concepts in computer security and use 
+    them
+  \item find and use documentation of security related problems and tools
+  \item analyse simple program code and systems (based on given or self-made 
+    system descriptions) to identify vulnerabilities and predict corresponding 
+    threats
+  \item select countermeasures against identified threats and argue for their 
+    suitability
+  \item compare countermeasures and evaluate their side effects,
+  \item apply countermeasures present and explain their reasoning to others.
+\end{itemize}
+
+In the area of the cybersecurity engineer's role in society, the student should 
+be able to:
+\begin{itemize}
+  \item analyse and discuss how the use and development of digital systems and 
+    in particular the security of these systems affect and are affected by 
+    social, economic, environmental, work environmental and ethical 
+    sustainability as well as diversity, gender equality and equal conditions
+  \item review critically and reflect on both the set-up and implementation of 
+    the education as well as their own study situation, their skills in 
+    relation to the objective of the education and the future professional role 
+    and their ability to identify their own need of additional knowledge
+  \item plan and carry out assignments within given time frames and using 
+    available resources
+  \item write short, clear and arguing texts based on own analysis as well as 
+    given material.
+\end{itemize}
+
+Finally, since course is intended to complement the general research methods 
+course, we expect the students to, with regards to the theory and  methodology 
+of science, both orally as well as in writing, be able to:
+\begin{itemize}
+  \item identify definitions and descriptions of concepts, theories and problem 
+    areas, as well as identify the correct application of these concepts and 
+    theories;
+  \item account for concepts, theories and general problem areas, as well as 
+    apply concepts and theories to specific cases;
+  \item critically discuss the definitions and applications of concepts and 
+    theories as they applies to specific cases of scientific research.
+\end{itemize}
 
 
 \section{More concretely}
 
+Let's return to the goal of the course and then proceed to its contents.
+
 \subsection{The goal}
 
-\begin{frame}
+Let's have a look at provable security, widely considered the epitome of 
+security research.
+
+\begin{frame}<presentation>
   \begin{example}[\enquote{Provable security}]
     \begin{itemize}
       \item A uniformly random string of length \(n\) is the most secure 
@@ -169,7 +268,12 @@
   \end{remark}
 \end{frame}
 
-\begin{frame}
+\begin{example}[\enquote{Provable security}]\label{SecurePassword}
+  A uniformly random string of length \(n\) is the most secure password.
+  We can prove it will take millions of years to guess it.
+\end{example}
+
+\begin{frame}<presentation>
   \begin{example}[Usability]
     \begin{itemize}
       \item Turns out people can't handle uniformly random passwords.
@@ -189,6 +293,211 @@
   \end{remark}
 \end{frame}
 
+However, attackers still get in.
+% XXX add refs to password literature
+It turns out that humans can't handle long, uniformly random passwords.
+Particularly not when they have to remember one such password \emph{per service 
+they use}.
+And they can't generate uniformly random passwords either!
+None of these results could be found through provable security, they're from 
+the usability area of security and the methods are from the usability and 
+human--computer interaction research field.
+
+By this we don't say that provable security is wrong or doesn't work.
+The same can be said of the usability methods.
+Both are needed, they complement each other in generating understanding of 
+security problems.
+The goal of the course is that the students should be able to master the 
+variety of methods [\ref{LOrelate}] and combine them to answer questions about 
+security problems [\ref{LOapply}].
+That includes being able to evaluate different approaches to answering 
+questions and choosing among the most suitable ones [\ref{LOevaluate}].
+
+Knowledge dissemination is about communicating results to others.
+And in science, to convince others that one's results are correct.
+We can see this aspect in \ref{LOcomm} (and \ref{Ccomm}) and we will see this 
+aspect as part of the assessment of the course later.
+
+
+\subsection{Teaching design}
+
+The teaching design of the course is particularly interesting to describe in 
+this course, because it is highly relevant on the meta level.
+
+\begin{frame}<presentation>[fragile]
+  \begin{block}{Teaching design}
+    \begin{itemize}
+      \item Have problems that must be explored using several 
+        methods.
+      \item Work through enough problems to cover the entire spectrum.
+    \end{itemize}
+  \end{block}
+
+  \begin{remark}[Learning theory]
+    \begin{columns}[T]
+      \begin{column}{0.6\columnwidth}
+          \centering
+          \includegraphics[width=0.8\columnwidth]{figs/variatio-mater-studiorum.png}
+        \end{column}
+        \begin{column}{0.4\columnwidth}
+          \includegraphics[height=0.55\textheight]{figs/NCOL.jpg}
+        \end{column}
+      \end{columns}
+  \end{remark}
+\end{frame}
+
+The design of the course is based on the variation theory of learning~\cite[see 
+\eg][]{NecessaryConditionsOfLearning}.
+The goal of the theory is to achieve learning that prepares for unknown 
+situations.
+It aims for deep learning (as opposed to surface learning, 
+\cf~\cite{DeepSurfaceLearning}).
+This fits very well with our learning outcomes (\cref{LearningOutcomes}).
+In fact, \textcite{NecessaryConditionsOfLearning} makes a point that learning 
+(according to this theory), is in fact very aligned with science and research.
+However, variation theory, according to me, tells us more than the scientific 
+method traditionally does; it tells us about the preconditions to scientific 
+discovery.
+
+But what does this mean for the course concretely?
+Well, in a sense, we could say that the teaching will treat some situations and 
+the assessment will treat something \enquote{completely different}.
+Of course, there is something in common, namely the essence of the course.
+But the purpose of the assessment is to test if the student can use what 
+they've learned from the teaching to handle this unknown situation.
+Now this also means that if a student adopts the approach of opening the 
+assignments and then try to find the correct answers in the teaching material, 
+that student will be very disappointed in the course.
+
+In essence, we will look at problems and work out suitable methods to answer 
+questions about the problem at hand.
+(This is the pattern of variation called contrast, in terms of 
+\cite{NecessaryConditionsOfLearning}, and focuses on \ref{LOrelate}, it's the 
+first and crucial step of learning.)
+Then we'll dive into each method to explore what kinds of questions it can help 
+answer.
+(This is the pattern of variation called generalization, in terms of 
+\cite{NecessaryConditionsOfLearning}, and focuses on \ref{LOevaluate}.
+Coincidentally, this pattern corresponds to what is called the scientific 
+method.)
+Finally, we will combine the methods to answer more complex questions.
+(This is the variation of fusion, in terms of 
+\cite{NecessaryConditionsOfLearning}, and focuses on \ref{LOapply}.)
+The assessment will then be a new problem where the students must combine the 
+methods to answer more complex questions on their own.
+
+For the remaining learning objectives, \ref{LOplan} and \ref{LOcomm}, we will 
+use the students' own works as learning material.
+The idea is as follows:
+The students will review each others' works, so this concerns \ref{LOcomm}.
+If the work is about arguing why a method answers a particular research 
+question, then another student's solution will provide a contrasting 
+perspective to one's own.
+Even if the choice of method is the same, the phrasing of the arguments 
+provides contrast to one's own arguments and phrasing thereof.
+
+% XXX how do we teach LOplan?
+
+\subsection{Format}
+
+\begin{frame}[fragile]
+  \begin{block}{Examination}
+    \begin{description}
+      \item[INL1] Seminars and assignments, 3.0 credits, grading scale: P, F
+    \end{description}
+  \end{block}
+
+  \pause
+
+  \begin{block}{Format}
+    \begin{itemize}
+      \item Online assignments
+      \item Asynchronous, social annotation
+      \item One in-place\footnote{%
+          For the campus students.
+        } final seminar
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{columns}
+    \begin{column}{0.5\columnwidth}
+      \begin{block}{Teaching material}
+        \begin{itemize}
+          \item<1> Video lectures where students can ask questions and answer 
+            quizzes\footnote{FeedbackFruits or Canvas Studio}.
+
+            \pause
+
+          \item<2-3> Reading assignments with social annotation\footnote{%
+              FeedbackFruits or Perusall
+            }.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\columnwidth}
+      \only<1>{
+        \begin{figure}
+          \centering
+          \includegraphics[width=\columnwidth]{figs/fbf-video-quiz.png}
+          \caption{%
+            An interactive video in FeedbackFruits where one can answer quiz 
+            questions posed in the video.%
+          }
+        \end{figure}
+      }
+      \only<2>{
+        \begin{figure}
+          \centering
+          \includegraphics[width=\columnwidth]{figs/fbf-doc-quiz-question.png}
+          \caption{%
+            An interactive document in FeedbackFruits where one can answer quiz 
+            questions posed in the document and ask questions about the 
+            content.%
+          }
+        \end{figure}
+      }
+      \only<3>{
+        \begin{figure}
+          \centering
+          \includegraphics[width=\columnwidth]{figs/fbf-doc-annotations.png}
+          \caption{%
+            An interactive document in FeedbackFruits where one can annotate 
+            the text with focused topics together with other students in the 
+            class.%
+          }
+        \end{figure}
+      }
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Assessment}
+    \begin{itemize}
+      \item A synchronous seminar to summarize all work and tie the sack.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Giving the course}
+    \begin{enumerate}
+      \item Given every period; yes, four times per year.
+    \end{enumerate}
+  \end{block}
+
+  \pause
+
+  \begin{remark}
+    \begin{enumerate}
+      \item Asynchronicity and frequency are good for PhD students.
+      \item Joint with master's is good for funding it.
+      \item Also synergies between different progressions.
+    \end{enumerate}
+  \end{remark}
+\end{frame}
 
 \subsection{Contents}
 
@@ -257,28 +566,6 @@
   \end{example}
 \end{frame}
 
-\begin{frame}[fragile]
-  \begin{block}{Teaching design}
-    \begin{itemize}
-      \item Have problems that must be explored using several 
-        methods.
-      \item Work through enough problems to cover the entire spectrum.
-    \end{itemize}
-  \end{block}
-
-  \begin{remark}[Learning theory]
-    \begin{columns}[T]
-      \begin{column}{0.6\columnwidth}
-          \centering
-          \includegraphics[width=0.8\columnwidth]{figs/variatio-mater-studiorum.png}
-        \end{column}
-        \begin{column}{0.4\columnwidth}
-          \includegraphics[height=0.55\textheight]{figs/NCOL.jpg}
-        \end{column}
-      \end{columns}
-  \end{remark}
-\end{frame}
-
 %\begin{frame}
 %  \begin{block}{Contents, part II}
 %    \begin{itemize}
@@ -345,81 +632,6 @@
 %  \end{block}
 %\end{frame}
 
-\subsection{Format}
-
-\begin{frame}[fragile]
-  \begin{block}{Examination}
-    \begin{description}
-      \item[INL1] Seminars and assignments, 3.0 credits, grading scale: P, F
-    \end{description}
-  \end{block}
-
-  \pause
-
-  \begin{block}{Format}
-    \begin{itemize}
-      \item Online assignments
-      \item Asynchronous, social annotation
-      \item One in-place\footnote{%
-          For the campus students.
-        } final seminar
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \begin{columns}
-    \begin{column}{0.5\columnwidth}
-      \begin{block}{Teaching material}
-        \begin{itemize}
-          \item<1> Video lectures where students can ask questions and answer 
-            quizzes\footnote{FeedbackFruits or Canvas Studio}.
-
-            \pause
-
-          \item<2-3> Reading assignments with social annotation\footnote{%
-              FeedbackFruits or Perusall
-            }.
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.5\columnwidth}
-      \begin{figure}
-        \centering
-        \only<1>{\includegraphics[width=\columnwidth]{figs/fbf-video-quiz.png}}
-        \only<3>{\includegraphics[width=\columnwidth]{figs/fbf-doc-annotations.png}}
-        \only<2>{\includegraphics[width=\columnwidth]{figs/fbf-doc-quiz-question.png}}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \begin{block}{Assessment}
-    \begin{itemize}
-      \item A synchronous seminar to summarize all work and tie the sack.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \begin{block}{Giving the course}
-    \begin{enumerate}
-      \item Given every period; yes, four times per year.
-    \end{enumerate}
-  \end{block}
-
-  \pause
-
-  \begin{remark}
-    \begin{enumerate}
-      \item Asynchronicity and frequency are good for PhD students.
-      \item Joint with master's is good for funding it.
-      \item Also synergies between different progressions.
-    \end{enumerate}
-  \end{remark}
-\end{frame}
-
 
 \section{Conclusions and discussion}
 
@@ -482,6 +694,7 @@
 %%% REFERENCES %%%
 
 \begin{frame}[allowframebreaks]
-  \printbibliography
+  \only<article>{\printbibliography[heading=bibintoc]}
+  \only<presentation>{\printbibliography}
 \end{frame}
 
