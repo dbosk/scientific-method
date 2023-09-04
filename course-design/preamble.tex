@@ -3,31 +3,37 @@
 \usepackage[british]{babel}
 \usepackage{booktabs}
 
-\usepackage[natbib,style=alphabetic,maxbibnames=99]{biblatex}
+\usepackage[%
+  natbib,
+  citestyle=verbose,singletitle=false,
+  style=verbose,
+  maxbibnames=99,%
+  isbn=false,doi=false,url=false
+]{biblatex}
 \addbibresource{bibliography.bib}
 
 \usepackage[all]{foreign}
 \renewcommand{\foreignfullfont}{}
 \renewcommand{\foreignabbrfont}{}
 
-\usepackage{newclude}
 \usepackage{import}
 
 \usepackage[strict]{csquotes}
+\SetCiteCommand{\autocite}
 \usepackage[single]{acro}
-
-\usepackage{subcaption}
+\acsetup{cite/cmd={\autocite}}
 
 \usepackage[noend]{algpseudocode}
 \usepackage{xparse}
 
 \let\email\texttt
 
-\usepackage{listings}
-\lstset{%
-  basicstyle=\footnotesize,
-  numbers=left
-}
+\usepackage[outputdir=ltxobj]{minted}
+\setminted{autogobble}
+
+\usepackage{pythontex}
+\setpythontexoutputdir{.}
+\setpythontexworkingdir{..}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -39,6 +45,10 @@
 
 \usepackage[binary-units]{siunitx}
 
-\usepackage[capitalize]{cleveref}
+\usepackage{adjustbox}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{changepage}
 
+\usepackage[capitalize]{cleveref}
 \input{objectives.tex}
