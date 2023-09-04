@@ -402,6 +402,40 @@ turned out and what the student learned.
 
 \subsection{Format}
 
+We have the following division of credits in LADOK\footnote{%
+  See the syllabus:
+  \url{https://www.kth.se/student/kurser/kurs/DA2215?l=en}.
+}\footnote{%
+  There is a similar line in DD2302.
+}:
+\begin{description}
+  \item[INL1] Seminars and assignments, 3.0 credits, grading scale: P, F
+\end{description}
+
+The assignments consists of reading and social annotation in an online tool 
+(\cref{fbfdocquiz,fbfdocannotation}).
+The seminars are live seminars on Zoom (or in-person on campus).
+The idea is that you learn from the first few seminars, so that we can grade 
+you on the last one.
+
+\begin{figure}[t]
+  \begin{fullwidth}
+  \subbottom[%
+  An interactive document in FeedbackFruits where one can answer quiz questions 
+  posed in the document and ask questions about the content.%
+  \label{fbfdocquiz}%
+  ]{\includegraphics[height=0.3\textheight]{figs/fbf-doc-quiz-question.png}}
+  \hspace{1em}
+  \subbottom[%
+    An interactive document in FeedbackFruits where one can annotate the text 
+    with focused topics together with other students in the class.%
+    \label{fbfdocannotation}%
+  ]{\includegraphics[height=0.3\textheight]{figs/fbf-doc-annotations.png}}
+  \caption{Two ways of having interactive documents.}\label{fbfdoc}
+  \end{fullwidth}
+\end{figure}
+
+\mode<presenation>{%
 \begin{frame}[fragile]
   \begin{block}{Examination}
     \begin{description}
@@ -415,13 +449,29 @@ turned out and what the student learned.
     \begin{itemize}
       \item Online assignments
       \item Asynchronous, social annotation
-      \item One in-place\footnote{%
-          For the campus students.
-        } final seminar
+      \item One final seminar, online or in-place
     \end{itemize}
   \end{block}
 \end{frame}
+}
 
+The reading assignments are part of the learning material.
+These are complemented by interactive video lectures (\cref{fbfvideo}) and the 
+early seminar sessions.
+In the video lectures the students can ask questions and answer quizzes.
+The seminar sessions (not the last one) aim at exploring the paths not taken in 
+the material.
+
+\begin{marginfigure}
+  \includegraphics[width=\columnwidth]{figs/fbf-video-quiz.png}
+  \caption{%
+    An interactive video in FeedbackFruits where one can answer quiz 
+    questions posed in the video.%
+  }\label{fbfvideo}
+\end{marginfigure}
+
+
+\mode<presentation>{%
 \begin{frame}
   \begin{columns}
     \begin{column}{0.5\columnwidth}
@@ -474,7 +524,12 @@ turned out and what the student learned.
     \end{column}
   \end{columns}
 \end{frame}
+}
 
+The seminars are used as synchronization points.
+The final seminar summarizes the course and results in a grade.
+
+\mode<presentation>{%
 \begin{frame}
   \begin{block}{Assessment}
     \begin{itemize}
@@ -489,20 +544,19 @@ turned out and what the student learned.
       \item Given every period; yes, four times per year.
     \end{enumerate}
   \end{block}
-
-  \pause
-
-  \begin{remark}
-    \begin{enumerate}
-      \item Asynchronicity and frequency are good for PhD students.
-      \item Joint with master's is good for funding it.
-      \item Also synergies between different progressions.
-    \end{enumerate}
-  \end{remark}
 \end{frame}
+}
 
 \subsection{Contents}
 
+The course starts with an overview of the complexity.
+Then we proceed through a series of \enquote{How do you know it's secure?} case 
+studies (assignments mentioned above), that are summarized in two seminars 
+(mentioned above).
+The idea is to explore how different research methods play together to answer 
+different research questions.
+
+\mode<presentation>{%
 \begin{frame}
   \begin{block}{Contents}
     \begin{itemize}
@@ -529,7 +583,14 @@ turned out and what the student learned.
     \end{itemize}
   \end{remark}
 \end{frame}
+}
 
+We'll try to answer questions like
+\enquote{What can deduction possibly say about reality?}
+and \enquote{What can induction possibly say about security?}.
+And what are the limitations?
+
+\mode<presentation>{%
 \begin{frame}
   \begin{example}[Deductive inquiry]
     \begin{itemize}
@@ -554,7 +615,15 @@ turned out and what the student learned.
     \end{itemize}
   \end{remark}
 \end{frame}
+}
 
+We'll end the teaching part with a seminar more towards the philosophy of 
+science of security.
+We'll depart in the paper 
+\citetitle{SecurityAsAScience}\autocite{SecurityAsAScience} by
+\citeauthor{SecurityAsAScience}.
+
+\mode<presentation>{%
 \begin{frame}
   \begin{example}[Philosophy of Science of Security]
     \begin{itemize}
@@ -567,6 +636,7 @@ turned out and what the student learned.
     \end{itemize}
   \end{example}
 \end{frame}
+}
 
 %\begin{frame}
 %  \begin{block}{Contents, part II}
@@ -613,7 +683,23 @@ turned out and what the student learned.
 %    \end{itemize}
 %  \end{block}
 %\end{frame}
-%
+
+\subsection{Final assessment}
+
+The final assessment will be an assignment where the students design a research 
+method for a given set of research questions.
+This will assess all the learning outcomes: \cref{%
+  LOrelate,LOcomm,LOplan,LOapply,LOevaluate%
+}.
+
+You'll do this by writing a report motivating your choices of methods and 
+explaining why they answer the question.
+You'll also present this report at the final seminar.
+Someone else will review the report, and you will review someone else's report 
+too.
+
+The final assessment will be done in pairs.
+
 %\begin{frame}[allowframebreaks]
 %  \begin{block}{Assessment}
 %    \begin{itemize}
@@ -634,57 +720,7 @@ turned out and what the student learned.
 %  \end{block}
 %\end{frame}
 
-
-\section{Conclusions and discussion}
-
-\begin{frame}
-  \begin{block}{From 2020}
-    \begin{itemize}
-      \item<+> Emphasis on practice, not only on philosophy of science, to be 
-        able to evaluate how strong a claim is justified in one's own and 
-        others' publications and to learn to apply scientific methods to 
-        increase the confidence in new results.
-
-      \item<+> How is the progression compared to the \enquote{normal} 
-        methodology  course?
-        \begin{itemize}
-          \item What is the added value?
-          \item Focus on specifics of security, assume participants have taken 
-            \enquote{regular} research methods course.
-        \end{itemize}
-
-      \item<+> Target audience? Half-way-through students?
-
-      \item<+> 20+ students said they wanted such a course.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-  \begin{columns}
-    \begin{column}{0.7\columnwidth}
-      \begin{block}{Available on GitHub}
-        \begin{itemize}
-          \item \url{https://github.com/OpenSecEd/scientific-method}
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.3\columnwidth}
-      \includegraphics[width=\columnwidth]{figs/GHurl.png}
-    \end{column}
-  \end{columns}
-
-  \begin{remark}[Contributions]
-    \begin{itemize}
-      \item<+> Good \emph{and bad} work! (Misconceptions)
-      \item<+> Literature on methods in security
-      \item<+> Videos if you want to talk about your favourite methods.
-      \item<+> Just add thoughts to issue tracker on GH.
-    \end{itemize}
-  \end{remark}
-\end{frame}
-
-\begin{frame}
+\begin{frame}<presentation>
   \begin{question}
     \begin{itemize}
       \item Comments, questions, other thoughts?
