@@ -2,7 +2,7 @@
 %%% Tufte %%%
 \usepackage{marginfix}
 %\setlength{\evensidemargin}{\oddsidemargin}
-%\marginparmargin{outer}
+\marginparmargin{outer}
 \setlrmarginsandblock{2.5cm}{8cm}{*}
 
 \footnotesinmargin
@@ -37,6 +37,8 @@
 \let\subsubsection\subsection
 \let\subsection\section
 \let\section\chapter
+
+\newsubfloat{figure}% Allow subfloats in figure environment
 
 \input{preamble.tex}
 
