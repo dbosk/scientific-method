@@ -25,14 +25,57 @@
 
 \section{Introduction}
 
+\begin{frame}
+We've had passwords for about as long as we've had computers.
+Unfortunately, we still\footnote{As of \today.} haven't managed to do it right 
+in practice.
+\end{frame}
+So here we'll deal with the following question.
+
+\begin{frame}
+  \begin{question}\label{RQ}
+    How can we know how secure our password-based authentication system will be?
+  \end{question}
+\end{frame}
 
 
+\section{How do we know it's secure?}
+
+\begin{frame}
+We have a system where users log in.
+We want to authenticate the users securely.
+We've decided to use a password-based authentication system\footnote{%
+  Yes, I know it's a bit of an oxymoron, but humor me.
+}.
+\end{frame}
+
+\begin{frame}
+  \begin{question}
+    What do we need to know to try to answer \cref{RQ}?
+  \end{question}
+\end{frame}
 
 
+\subsection{What do we mean by secure?}
 
+Well, first of all, we need to define what we mean by \enquote{being secure}.
+\Cref{RQ} asks us to estimate how secure a password-based authentication system 
+is.
+That means that there might be several possible levels of security.
 
+\begin{frame}[fragile]
+  \begin{question}
+    How do we define security for an authentication system?
+  \end{question}
+\end{frame}
 
+\begin{frame}
+\begin{definition}[Informal definition of security]
+  The authentication system is \emph{secure} if it is \emph{hard} for an 
+  adversary to authenticate a false claim.
+  We let the \emph{security level} of an authentication system be the inverse 
+  probability of a successful attack.
+\end{definition}
+\end{frame}
 
-
-
-
+We can also define security in terms of the amount of work an adversary has to.
