@@ -1,4 +1,7 @@
 bibliography.bib
 notes.pdf
 slides.pdf
-
+notes.aux
+notes.fdb_latexmk
+notes.fls
+notes.log
