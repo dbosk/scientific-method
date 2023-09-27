@@ -56,6 +56,22 @@ We've decided to use a password-based authentication system\footnote{%
   \end{exercise}
 \end{frame}
 
+\begin{frame}<presentation>[fragile]
+  \begin{itemize}
+    \item need definition of secure
+    \item need definition of adversary
+    \item threat modelling
+    \item context
+    \item implementation details
+    \item password policy
+    \item storage
+    \item encryption methods used
+    \item check how users choose passwords
+    \item test the passwords by guessing
+    \item check for password reuse
+    \item NIST guidelines
+  \end{itemize}
+\end{frame}
 
 \section{What do we mean by secure?}
 
@@ -75,6 +91,18 @@ That means that there might be several possible levels of security.
     The first thing to do is to investigate how others have defined this.
     So our approach will be to do a literature review.
   \end{solution}
+\end{frame}
+
+\begin{frame}<presentation>[fragile]
+  \begin{itemize}
+    \item define in terms of brute forceability/guessability
+    \item define in terms of confidentiality, integrity, availability
+    \item only the right subject can access
+    \item the number of defences
+    \item security of credentials (confidentiality, integrity, availability)
+    \item probability that no one successfully tricks the system into believing 
+      that they are someone they are not
+  \end{itemize}
 \end{frame}
 
 \subsection{Literature reviews}
@@ -129,14 +157,14 @@ However, we don't need to document systematically how we do it.
     Which type of literature review should we do; systematic or non-systematic?
     Why?
   \end{exercise}
-\end{frame}
 
-In this case, the goal is to get an overview of the literature.
-Since purpose is to research what definitions there are and how they're used, 
-we must document our method of research.
-This means that we should do a systematic literature review.
+  \mode<article>{%
+    In this case, the goal is to get an overview of the literature.
+    Since purpose is to research what definitions there are and how they're 
+    used, we must document our method of research.
+    This means that we should do a systematic literature review.
+  }
 
-\begin{frame}
   \begin{exercise}
     We want to explore different definitions of security for authentication 
     systems to find a definition to use for our study.
@@ -197,10 +225,20 @@ However, we just reduced the problem of defining \enquote{being secure} to
 defining what \enquote{hard} means.
 This leads us down the path of formal security, \eg using complexity theory.
 
+\begin{frame}
 \begin{exercise}
   Search for a suitable formal definition of security for an authentication 
   system, one that captures what we've laid out above.
 \end{exercise}
+
+\begin{example}
+  \begin{itemize}
+    \item Google Scholar with keywords
+    \item KTH Library search
+    \item Search non-scholar Google
+  \end{itemize}
+\end{example}
+\end{frame}
 
 When I did this, I first searched for authentication.
 Then I tried to look for any definitions among the results.
@@ -257,6 +295,12 @@ complex enough password, the adversary will not be able to guess it.
       \item An empirical investigation.
     \end{enumerate}
   \end{solution}
+
+  \mode<presentation>{%
+    \begin{remark}[Your answers]
+      Some gave one, some gave the other, some gave both.
+    \end{remark}
+  }
 \end{frame}
 
 \subsection{Deductive evaluation}
@@ -306,6 +350,12 @@ password.
     Is it really secure, why or why not?
     How can we answer this question?
   \end{exercise}
+
+  \mode<presentation>{%
+    \begin{remark}
+      Most answers were onto that this might not match reality.
+    \end{remark}
+  }
 \end{frame}
 
 \subsection{Empirical evaluation}
@@ -374,6 +424,17 @@ within the bounds of the password policy.
     What questions should we ask?
     How can we answer them?
   \end{exercise}
+
+  \mode<presentation>{%
+    \begin{remark}
+      \begin{itemize}
+        \item Hardly anyone thought of mapping the users' ability to tell 
+          verifiers apart.
+        \item Two-factor authentication etc.?
+        \item Eavesdropping?
+      \end{itemize}
+    \end{remark}
+  }
 \end{frame}
 
 Well, our model says that the verifier is benign.
