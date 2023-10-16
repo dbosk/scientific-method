@@ -1,7 +1,42 @@
-\documentclass{article}
+\documentclass[a4paper,10pt,article,oneside]{memoir}
+%%% Tufte %%%
+\usepackage{marginfix}
+%\setlength{\evensidemargin}{\oddsidemargin}
+\marginparmargin{outer}
+\setlrmarginsandblock{2.5cm}{8cm}{*}
 
-\usepackage[hyphens]{url}
-\usepackage[hidelinks]{hyperref}
+\footnotesinmargin
+
+\usepackage{ragged2e}
+\renewcommand{\sidefootform}{\RaggedRight}
+\renewcommand{\foottextfont}{\footnotesize\RaggedRight}
+
+\setmpjustification{\RaggedRight}{\RaggedRight}
+
+% margin figure and caption typeset ragged against text block
+\setfloatadjustment{marginfigure}{\mpjustification}
+\setmarginfloatcaptionadjustment{figure}{\captionstyle{\mpjustification}}
+
+% From https://tex.stackexchange.com/a/324757/17418
+% Palatino for main text and math
+\usepackage[osf,sc]{mathpazo}
+
+% Helvetica for sans serif
+% (scaled to match size of Palatino)
+\usepackage[scaled=0.90]{helvet}
+
+% Bera Mono for monospaced
+% (scaled to match size of Palatino)
+\usepackage[scaled=0.85]{beramono}
+
+\setlxvchars\setxlvchars
+\checkandfixthelayout
+
+\nouppercaseheads
+%%% end tufte %%%
+\let\subsubsection\subsection
+\let\subsection\section
+\let\section\chapter
 
 \input{preamble.tex}
 
@@ -11,43 +46,20 @@
 %\usepackage{authblk}
 %\let\institute\affil
 
-\declaretheorem[numbered=unless unique,style=theorem]{theorem}
-\declaretheorem[numbered=unless unique,style=definition]{definition}
-\declaretheorem[numbered=unless unique,style=definition]{assumption}
-\declaretheorem[numbered=unless unique,style=definition]{protocol}
-\declaretheorem[numbered=unless unique,style=example]{example}
-%\declaretheorem[style=definition,numbered=unless unique,
-%  name=Example,refname={example,examples}]{example}
-\declaretheorem[numbered=unless unique,style=remark]{remark}
-\declaretheorem[numbered=unless unique,style=remark]{idea}
-\declaretheorem[numbered=unless unique,style=exercise]{exercise}
-\declaretheorem[numbered=unless unique,style=exercise]{question}
-\declaretheorem[numbered=unless unique,style=solution]{solution}
+\declaretheorem[style=theorem]{theorem}
+\declaretheorem[style=definition]{definition}
+\declaretheorem[style=definition]{assumption}
+\declaretheorem[style=definition]{protocol}
+\declaretheorem[style=example]{example}
+\declaretheorem[style=remark]{remark}
+\declaretheorem[style=remark]{idea}
+\declaretheorem[style=exercise]{exercise}
+\declaretheorem[style=exercise]{question}
+\declaretheorem[style=solution]{solution}
 
 \usepackage[inline]{enumitem}
 
 \begin{document}
-\title{%
-  Assessment:\\
-  Designing a methodology to answer a question
-}
-\author{Daniel Bosk\thanks{%
-    This material was authored by Daniel Bosk and is available under the 
-    Creative Commons Attribution-ShareAlike (CC-BY-SA) 4.0 international 
-    license.
-}}
-\institute{%
-  KTH EECS
-}
-
-\maketitle
-
-\begin{abstract}
-  \input{abstract.tex}
-\end{abstract}
-
-\clearpage
-
 \input{contents.tex}
 
 \printbibliography
