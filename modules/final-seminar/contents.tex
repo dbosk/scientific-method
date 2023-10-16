@@ -4,64 +4,186 @@
 
 Now you should be able to design a method to answer a given research question.
 Hence, in this assignment you should show that you can do exactly that.
-You will be assigned a research question (or set of related research questions) 
-for which you should propose a way to answer scientifically.
+You will be assigned a research question for which you should propose a way to 
+answer scientifically.
 
-Combine different methods to answer.
-Supply chain.
-Secure micro-services.
+%Combine different methods to answer.
+%Supply chain.
+%Secure micro-services.
+%
+%Feedback to improve method for another question.
+%
+%Background: formal verification etc., different approaches.
+%
+%Inspelad presentation eller live. 4h x 4 i tentaperioden.
 
-Feedback to improve method for another question.
+\section{Scenario and research question}
 
-Background: formal verification etc., different approaches.
-
-Inspelad presentation eller live. 4h x 4 i tentaperioden.
-
+The research question that you should answer is the following:
+\begin{question}
+  We want to develop a secure instant-messaging system\footnote{%
+    Think chat or SMS/text messages; something like Signal, WhatsApp, Telegram, 
+    \etc
+  }.
+  How can we evaluate its security?
+\end{question}
 
 \section{Assessment}\label{Assessment}
 
-The learning objectives that we want to assess are the following, after 
-completion of the course we want the student to be able to
+In brief, what you should be able to do is to ask good questions and propose 
+suitable ways of answering them.
+More formally, the learning objectives that we want to assess are the 
+following; after completion of the course we want the student to be able to
 \begin{enumerate}[label={(LO\arabic*)},ref=LO\arabic*]
-  \item \LOrelate;
-  \item \LOevaluate;
-  \item \LOapply;
-  \item \LOplan; and
-  \item \LOcomm.
+  \item \LOrelate*;
+  \item \LOevaluate*;
+  \item \LOapply*;
+  \item \LOplan*; and
+  \item \LOcomm*.
 \end{enumerate}
 
-\paragraph{Material you should produce}
+\subsection{Material you should produce}
 
-You should
+To be able to show that you can do that, you should
 \begin{itemize}
   \item write a report, and
-  \item make a presentation (10 minutes).
+  \item make a presentation (10 minutes).\footnote{%
+      If you write your report in LaTeX, consider writing your slides in LaTeX 
+      also using the \texttt{beamer} and \texttt{beamerarticle} packages.
+    }
 \end{itemize}
-These should should contain:
-\begin{itemize}
-  \item your research questions,
-  \item how you propose to answer the questions (methods used),
-  \item why those methods answer the questions properly,
-  \item alternative methods that you discarded (and why), and, finally,
-  \item your original plan for the course work, adaptations made and what you 
-    learned.
-\end{itemize}
+These should should contain the following sections:
+\begin{enumerate}
+  \item Research question overview:
+    This section should give an overview of the research question and outline 
+    any subquestions that you derive.
+    (This focuses on \cref{LOrelate}.)
+  \item Methodology:
+    This section contains how you propose to answer the questions from the 
+    previous section (methods used).
+    (This focuses on \cref{LOapply}.)
+  \item Discussion:
+    In this section you discuss why those methods answer the questions properly 
+    and any limitations that you see.
+    You can also discuss item alternative methods that you discarded (and 
+    why).
+    (This focuses on \cref{LOevaluate}.)
+  \item Conclusion:
+    This ties the sack.
+    Here you connect the questions and the types of answers gained (through the 
+    methods) and piece them back into the original research question.
+    You also summarize how well you find the original question to be answered, 
+    if there are any \enquote{holes that need filling}.
+    (This focuses on \cref{LOrelate,LOevaluate,LOcomm}.)
+%  \item your original plan for the course work, adaptations made and what you 
+%    learned.
+\end{enumerate}
 This assesses \cref{LOrelate,LOevaluate,LOapply,LOcomm,LOplan}.
 
-\paragraph{Feedback you should provide}
+%\paragraph{Feedback you should provide}
+%
+%You should also
+%\begin{itemize}
+%  \item review someone else's report.
+%\end{itemize}
+%This assesses \cref{LOrelate,LOevaluate} and provides a learning opportunity 
+%for \cref{LOcomm}.
+%This also contributed to \cref{LOplan} as one would learn from others' 
+%mistakes.
+%
+%The presentation should also include
+%\begin{itemize}
+%  \item what you learned from the feedback of the reviewer, and
+%  \item what you learned from the work you reviewed.
+%\end{itemize}
+%This also assesses \cref{LOcomm}.
 
-You should also
-\begin{itemize}
-  \item review someone else's report.
-\end{itemize}
-This assesses \cref{LOrelate,LOevaluate} and provides a learning opportunity 
-for \cref{LOcomm}.
-This also contributed to \ref{LOplan} as one would learn from others' mistakes.
+\subsection{Assessment criteria}
 
-The presentation should also include
-\begin{itemize}
-  \item what you learned from the feedback of the reviewer, and
-  \item what you learned from the work you reviewed.
-\end{itemize}
-This also assesses \cref{LOcomm}.
+To assess the learning objectives
+(\cref{LOrelate,LOevaluate,LOapply,LOplan,LOcomm})
+we use the following criteria.
+These criteria are also included as a rubric in the assignment where you hand 
+in your report.
+
+We note, however, that there is no criteria for \cref{LOplan}.
+This is because we do not assess the plan itself, but rather the fact that you 
+finished on time.
+
+You'll need a pass on all criteria to pass the assignment and the course.
+
+{
+  \RaggedRight
+  \begin{longtable}
+  {p{0.24\textwidth}p{0.24\textwidth}p{0.24\textwidth}p{0.24\textwidth}}
+  \toprule
+  \textbf{Learning objective}
+    & \textbf{Criteria}
+    & \textbf{Pass}
+    & \textbf{Fail}
+    \\*
+  \midrule
+  \endhead
+  \cref{LOrelate}
+  The student is able to \LOrelate
+    & The main research question is explored from relevant aspects?
+    & There might be more aspects to explore, but the most important ones are 
+    covered. Motivate why no more aspect need to be explored.
+    & There is at least one aspect missing that can be motivated to be 
+    important. Motivate which one.
+
+    For instance, do we need to ask another more detailed (research) question 
+    to be able to answer the main research question in a meaningful way? Do 
+    they address the question from just a single perspective?
+    \\*
+  \midrule
+  \cref{LOapply}
+  The student is able to \LOapply
+    & The methods are suitable to answer the questions?
+    & All questions have suggested methods that can actually answer the 
+    question correctly.
+    Motivate why this is the case.
+    & There is at least one question that will not be answered correctly with 
+    the suggested method.
+    State which one and why.
+    For instance, the method might only answer part of the question.
+    %Or not at all.
+    \\*
+  \midrule
+  \cref{LOevaluate}
+  The student is able to \LOevaluate
+    & Are all quality aspects considered in the discussion?
+    & The most important quality aspects are considered and discussed.
+    & At least one important quality aspect is missing.
+    State which one and motivate why it's important enough that it must be 
+    treated.
+    \\*
+    & Are all ethical aspects considered?
+    & The most important ethical aspects are considered and discussed.
+    & At least one important ethical aspect is missing.
+    State which one and motivate why it's important enough that it must be 
+    treated.
+    \\*
+  \midrule
+  \cref{LOcomm}
+  The student is able to \LOcomm
+    & Is the report written as short as possible?
+    & The report can probably be slightly shortened, but not by much.
+    & The report can be shortened considerably.
+    Give at least one example of where and how.
+    \\*
+    & Is the report clear and easy to understand?
+    & The report is easy to understand.
+    & Some parts of the report must be read more than once to understand.
+    (Or worse.)
+    Give at least one example.
+    \\*
+    & Are the arguments clearly stated and well motivated?
+    & All arguments are clearly stated and well motivated.
+    & At least one argument is not clearly stated or not well motivated.
+    State which one and motivate why it's not clear or well motivated.
+    \\*
+  \bottomrule
+  \end{longtable}
+}
 
