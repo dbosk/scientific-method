@@ -6,6 +6,8 @@
    This material was authored by Daniel Bosk and is available under the 
    Creative Commons Attribution-ShareAlike (CC-BY-SA) 4.0 international 
    license.
+   GitHub Copilot was used to autocomplete parts of the source code of this 
+   document.
 }}
 \institute{%
   KTH EECS
@@ -31,6 +33,19 @@ Hence, in this assignment you should show that you can do exactly that.
 You will be assigned a research question for which you should propose a way to 
 answer scientifically.
 
+\begin{frame}<presentation>
+  \begin{block}{Goal}
+    \begin{itemize}
+      \item You should be able to design a method to answer a research 
+        question.
+      \item Security is multifaceted, you should be able to consider more than 
+        one perspective.
+      \item You should be able to ask good questions and know how to answer 
+        them.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 %Combine different methods to answer.
 %Supply chain.
 %Secure micro-services.
@@ -44,6 +59,7 @@ answer scientifically.
 \section{Scenario and research question}
 
 The research question that you should answer is the following:
+\begin{frame}
 \begin{question}
   We want to develop a secure instant-messaging system\footnote{%
     Think chat or SMS/text messages; something like Signal, WhatsApp, Telegram, 
@@ -51,6 +67,7 @@ The research question that you should answer is the following:
   }.
   How can we evaluate its security?
 \end{question}
+\end{frame}
 
 \section{Assessment}\label{Assessment}
 
@@ -69,6 +86,8 @@ following; after completion of the course we want the student to be able to
 \subsection{Material you should produce}
 
 To be able to show that you can do that, you should
+\begin{frame}
+  \only<presentation>{You should}
 \begin{itemize}
   \item write a report, and
   \item make a presentation (10 minutes).\footnote{%
@@ -78,30 +97,31 @@ To be able to show that you can do that, you should
 \end{itemize}
 These should should contain the following sections:
 \begin{enumerate}
-  \item Research question overview:
-    This section should give an overview of the research question and outline 
-    any subquestions that you derive.
-    (This focuses on \cref{LOrelate}.)
-  \item Methodology:
-    This section contains how you propose to answer the questions from the 
-    previous section (methods used).
-    (This focuses on \cref{LOapply}.)
-  \item Discussion:
-    In this section you discuss why those methods answer the questions properly 
-    and any limitations that you see.
-    You can also discuss item alternative methods that you discarded (and 
-    why).
-    (This focuses on \cref{LOevaluate}.)
-  \item Conclusion:
-    This ties the sack.
-    Here you connect the questions and the types of answers gained (through the 
-    methods) and piece them back into the original research question.
-    You also summarize how well you find the original question to be answered, 
-    if there are any \enquote{holes that need filling}.
-    (This focuses on \cref{LOrelate,LOevaluate,LOcomm}.)
+  \item Research question overview.
+    \only<article>{This section should give an overview of the research 
+      question and outline any subquestions that you derive.
+    (This focuses on \cref{LOrelate}.)}
+  \item Methodology.
+    \only<article>{This section contains how you propose to answer the 
+      questions from the previous section (methods used).
+    (This focuses on \cref{LOapply}.)}
+  \item Discussion.
+    \only<article>{In this section you discuss why those methods answer the 
+      questions properly and any limitations that you see.
+      You can also discuss item alternative methods that you discarded (and 
+      why).
+    (This focuses on \cref{LOevaluate}.)}
+  \item Conclusion.
+    \only<article>{This section ties the sack.
+      Here you connect the questions and the types of answers gained (through the 
+      methods) and piece them back into the original research question.
+      You also summarize how well you find the original question to be answered, 
+      if there are any \enquote{holes that need filling}.
+    (This focuses on \cref{LOrelate,LOevaluate,LOcomm}.)}
 %  \item your original plan for the course work, adaptations made and what you 
 %    learned.
 \end{enumerate}
+\end{frame}
 This assesses \cref{LOrelate,LOevaluate,LOapply,LOcomm,LOplan}.
 
 %\paragraph{Feedback you should provide}
@@ -136,10 +156,10 @@ finished on time.
 
 You'll need a pass on all criteria to pass the assignment and the course.
 
-{
+\begin{frame}[fragile,allowframebreaks]
   \RaggedRight
   \begin{longtable}
-  {p{0.35\textwidth}p{0.35\textwidth}p{0.35\textwidth}p{0.35\textwidth}}
+  {p{0.33\textwidth}p{0.33\textwidth}p{0.33\textwidth}p{0.33\textwidth}}
   \toprule
   \textbf{Learning objective}
     & \textbf{Criteria}
@@ -148,7 +168,7 @@ You'll need a pass on all criteria to pass the assignment and the course.
     \\*
   \midrule
   \endhead
-  \cref{LOrelate}
+  \only<article>{\cref{LOrelate}:}
   The student is able to \LOrelate
     & The main research question is explored from relevant aspects?
     & There might be more aspects to explore, but the most important ones are 
@@ -159,8 +179,8 @@ You'll need a pass on all criteria to pass the assignment and the course.
     to be able to answer the main research question in a meaningful way? Do 
     they address the question from just a single perspective?
     \\*
-  \midrule
-  \cref{LOapply}
+  \newpage
+  \only<article>{\cref{LOapply}:}
   The student is able to \LOapply
     & The methods are suitable to answer the questions?
     & All questions have suggested methods that can actually answer the 
@@ -172,8 +192,8 @@ You'll need a pass on all criteria to pass the assignment and the course.
     For instance, the method might only answer part of the question.
     %Or not at all.
     \\*
-  \midrule
-  \cref{LOevaluate}
+  \newpage
+  \only<article>{\cref{LOevaluate}:}
   The student is able to \LOevaluate
     & Are all quality aspects considered in the discussion?
     & The most important quality aspects are considered and discussed.
@@ -187,8 +207,8 @@ You'll need a pass on all criteria to pass the assignment and the course.
     State which one and motivate why it's important enough that it must be 
     treated.
     \\*
-  \midrule
-  \cref{LOcomm}
+  \newpage
+  \only<article>{\cref{LOcomm}:}
   The student is able to \LOcomm
     & Is the report written as short as possible?
     & The report can probably be slightly shortened, but not by much.
@@ -208,8 +228,9 @@ You'll need a pass on all criteria to pass the assignment and the course.
     \\*
   \bottomrule
   \end{longtable}
-}
+\end{frame}
 
+\only<article>{%
 \subsection{Plagiarism}
 
 You work in the groups that you've signed up for.
@@ -233,3 +254,33 @@ Ordinance, from its \S~1:
 
 Not mentioning that you've used ChatGPT or discussed the topic with people 
 outside the group is considered an attempt to deceive.
+}
+
+\section{The final seminar}
+
+\subsection{Structure}
+
+\begin{frame}
+  \begin{block}{Structure}
+    \begin{enumerate}
+      \item Each group presents
+      \item After each presentation, I might ask for some more details.
+      \item When everyone has presented, we discuss what we've heard.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\subsection{Questions for discussion}
+
+\begin{frame}
+  \begin{question}
+    What are the first thoughts while/after hearing the others present?
+  \end{question}
+  \begin{question}
+    What did you like the most from what you've heard?
+  \end{question}
+  \begin{question}
+    What would you like to improve/do differently/add to your own work 
+    after hearing what the others did?
+  \end{question}
+\end{frame}
