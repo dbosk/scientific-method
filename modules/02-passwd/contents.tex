@@ -52,25 +52,36 @@ We've decided to use a password-based authentication system\footnote{%
 
 \begin{frame}
   \begin{exercise}
-    What do we need to know to try to answer \cref{RQ}?
+    What do we need to know to try to answer \only<presentation>{the question 
+    above}\only<article>{\cref{RQ}}?
   \end{exercise}
 \end{frame}
 
+We first need to know what we mean by security.
+Depending on that, we can evaluate security differently.
+
 \begin{frame}<presentation>[fragile]
+  \begin{block}{How you answered}
   \begin{itemize}
     \item need definition of secure
     \item need definition of adversary
     \item threat modelling
-    \item context
+    \item context (banking, webmail, postal tracking?)
     \item implementation details
-    \item password policy
-    \item storage
-    \item encryption methods used
+      \begin{itemize}
+        \item password policy
+        \item password storage
+        \item encryption methods used
+        \item NIST guidelines
+        \item two-factor authentication
+        \item lock-out policies
+        \item connection security
+      \end{itemize}
     \item check how users choose passwords
     \item test the passwords by guessing
     \item check for password reuse
-    \item NIST guidelines
   \end{itemize}
+  \end{block}
 \end{frame}
 
 \section{What do we mean by secure?}
@@ -86,14 +97,8 @@ That means that there might be several possible levels of security.
   \end{exercise}
 \end{frame}
 
-\begin{frame}
-  \begin{solution}
-    The first thing to do is to investigate how others have defined this.
-    So our approach will be to do a literature review.
-  \end{solution}
-\end{frame}
-
 \begin{frame}<presentation>[fragile]
+  \begin{block}{How you answered}
   \begin{itemize}
     \item define in terms of brute forceability/guessability
     \item define in terms of confidentiality, integrity, availability
@@ -103,9 +108,24 @@ That means that there might be several possible levels of security.
     \item probability that no one successfully tricks the system into believing 
       that they are someone they are not
   \end{itemize}
+  \end{block}
 \end{frame}
 
-\subsection{Literature reviews}
+\begin{frame}
+  \begin{solution}
+    The first thing to do is to investigate how others have defined this.
+    So our approach will be to do a literature review.
+  \end{solution}
+\end{frame}
+
+\begin{frame}<presentation>
+  \begin{exercise}
+    Now that you've had the seminar with the library,
+    how would you go about?
+  \end{exercise}
+\end{frame}
+
+\subsection<article>{Literature reviews}
 
 There are several ways to do a literature review, or literature study.
 The first, and more rigorous, is to do a systematic literature review.
@@ -149,7 +169,7 @@ inspiration, then we can do a (non-systematic) literature review.
 In the case of a literature review, we still search the scientific literature.
 However, we don't need to document systematically how we do it.
 
-\begin{frame}
+\begin{frame}<article>
   \begin{exercise}
     We want to investigate the most common definitions of security for 
     authentication systems and for which types of authentication systems 
@@ -158,7 +178,7 @@ However, we don't need to document systematically how we do it.
     Why?
   \end{exercise}
 
-  \mode<article>{%
+  \only<article>{%
     In this case, the goal is to get an overview of the literature.
     Since purpose is to research what definitions there are and how they're 
     used, we must document our method of research.
@@ -218,6 +238,12 @@ possibilities for the details.
   We let the \emph{security level} of an authentication system be the inverse 
   probability of a successful attack.
 \end{definition}
+\only<presentation>{%
+\pause
+\begin{remark}
+  Many were onto something like this, in one way or another.
+\end{remark}
+}
 \end{frame}
 
 Now, that captures the essence of what we want.
@@ -225,17 +251,22 @@ However, we just reduced the problem of defining \enquote{being secure} to
 defining what \enquote{hard} means.
 This leads us down the path of formal security, \eg using complexity theory.
 
-\begin{frame}
+\begin{frame}<article>
 \begin{exercise}
   Search for a suitable formal definition of security for an authentication 
   system, one that captures what we've laid out above.
 \end{exercise}
 
-\begin{example}
+\begin{example}<presentation>
+  Useful tools:
   \begin{itemize}
     \item Google Scholar with keywords
-    \item KTH Library search
+    \item Semantic Scholar
     \item Search non-scholar Google
+    \item Web of Science
+    \item Inciteful
+    \item SciSpace
+    \item Elicit
   \end{itemize}
 \end{example}
 \end{frame}
@@ -371,6 +402,12 @@ This brings us to the following question.
   What is the password distribution?
   How are passwords chosen?
 \end{question}
+
+\pause
+
+\begin{solution}<presentation>
+  Passwords are usually affected by a password policy.
+\end{solution}
 \end{frame}
 
 Usually there is a \emph{password policy} which affects how users choose 
@@ -384,9 +421,21 @@ So we should change the question into the following.
 \begin{question}\label{Guessability}
   How easily can we guess the passwords under different password policies?
 \end{question}
-\begin{exercise}
-  How should we try to answer these questions?
-\end{exercise}
+\only<1>{%
+  \begin{exercise}
+    How should we try to answer these questions?
+  \end{exercise}
+}
+\only<2>{%
+  \begin{block}{How you answered}
+    \begin{itemize}
+      \item First question: Some suggested trying to look at real world 
+        passwords.
+      \item Second question: Some suggested probability theory.
+        Some suggested empirical evaluation (guessing).
+    \end{itemize}
+  \end{block}
+}
 \end{frame}
 
 \paragraph{Case studies on empirical evaluation}
@@ -408,12 +457,40 @@ within the bounds of the password policy.
 
 \begin{frame}
   \begin{figure}[h]
-    \includegraphics[width=\linewidth]{fig/password_strength.png}
+    \centering
+    \includegraphics[width=0.8\linewidth]{fig/password_strength.png}
     \caption{%
       The famous xkcd \enquote{correct horse battery staple} comic.
       Image: xkcd.com/936/.
     }\label{xkcd936}
   \end{figure}
+\end{frame}
+
+\begin{frame}<presentation>
+  \begin{remark}
+    \begin{itemize}
+      \item This is hard.
+    \end{itemize}
+  \end{remark}
+
+  \begin{exercise}
+    \begin{itemize}
+      \item How well did the papers answer the questions?
+      \item Papers:
+        \begin{itemize}
+          \item \citetitle{OfPasswordsAndPeople}
+          \item \citetitle{CanLongPasswordsBeSecureAndUsable}
+          \item \citetitle{GuessingHumanChosenSecrets2012}
+        \end{itemize}
+      \item Questions:
+        \begin{itemize}
+          \item How does different password policies affect the password 
+            distribution?
+          \item How easily can we guess the passwords under different password 
+            policies?
+        \end{itemize}
+    \end{itemize}
+  \end{exercise}
 \end{frame}
 
 \section{But is it even a good model to begin with?}
@@ -425,15 +502,17 @@ within the bounds of the password policy.
     How can we answer them?
   \end{exercise}
 
-  \mode<presentation>{%
-    \begin{remark}
+  \only<presentation>{%
+    \begin{block}{How you answered}
       \begin{itemize}
-        \item Hardly anyone thought of mapping the users' ability to tell 
-          verifiers apart.
+        \item Hardly anyone thought of the users' ability to tell verifiers 
+          apart.
         \item Two-factor authentication etc.?
         \item Eavesdropping?
+        \item Password storage? Password reuse?
+        \item Authenticating password vs user.
       \end{itemize}
-    \end{remark}
+    \end{block}
   }
 \end{frame}
 
@@ -462,6 +541,7 @@ benign verifier assumption, namely password reuse (\cref{xkcd792}).
 
 \begin{frame}
   \begin{figure}
+    \centering
     \includegraphics[height=0.9\textheight]{fig/password_reuse.png}
     \caption{%
       Illustrating whether the benign verifier assumption is a good idea in 
@@ -483,3 +563,27 @@ So we'll return to this paper later.
 %    Password re-use, incompetent service, malicious service.
 %  \end{question}
 %\end{frame}
+
+\begin{frame}<presentation>
+  \begin{exercise}
+    \begin{itemize}
+      \item How did \citetitle{WhyPhishingWorks} answer the question?
+    \end{itemize}
+  \end{exercise}
+\end{frame}
+
+\mode<presentation>{%
+\section{Evaluating other aspects}
+
+\begin{frame}
+  \begin{block}{Mentioned areas}
+    \begin{itemize}
+      \item Password storage
+      \item Password reuse
+      \item Two-factor authentication
+      \item Lock-out policies
+      \item Connection security
+    \end{itemize}
+  \end{block}
+\end{frame}
+}
