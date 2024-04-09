@@ -370,11 +370,12 @@ within the bounds of the password policy.
 
 \begin{frame}
   \begin{figure}[h]
-    \includegraphics[width=\linewidth]{fig/password_strength.png}
-    \caption{%
-      The famous xkcd \enquote{correct horse battery staple} comic.
+    \begin{sidecaption}[xkcd 936]{%
+      Illustrating the password policy of using a long passphrase.
       Image: xkcd.com/936/.
-    }\label{xkcd936}
+    }[xkcd936]
+      \includegraphics[width=\linewidth]{fig/password_strength.png}
+    \end{sidecaption}
   \end{figure}
 \end{frame}
 
@@ -433,12 +434,14 @@ benign verifier assumption, namely password reuse (\cref{xkcd792}).
 
 \begin{frame}
   \begin{figure}
-    \includegraphics[height=0.9\textheight]{fig/password_reuse.png}
-    \caption{%
+    \begin{sidecaption}[xkcd 792]{%
       Illustrating whether the benign verifier assumption is a good idea in 
       practice.
       Image: xkcd.com/792/.
-    }\label{xkcd792}
+    }[xkcd792]
+      \flushscap
+      \includegraphics[height=0.9\textheight]{fig/password_reuse.png}
+    \end{sidecaption}
   \end{figure}
 \end{frame}
 
