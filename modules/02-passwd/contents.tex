@@ -408,6 +408,16 @@ This leads us to the following question.
   \end{question}
 \end{frame}
 
+Now this depends on the users.
+Can they tell a benign verifier from an adversary?
+Turns out they can't\autocite{WhyPhishingWorks}.
+\Citeauthor{WhyPhishingWorks} actually found that users might actually test 
+whether the verifier is benign or not by entering their password:
+the reasoning was that if the is correct it will accept the password, otherwise 
+it will not (since it doesn't know the password)---which is a fallacy.
+This tells us that we need to consider the verifier as an adversary, 
+consequently we need a zero-knowledge property in \cref{FormalSecurity}.
+
 \begin{frame}<presentation>
   \begin{example}
     \fullcite{WhyPhishingWorks}
@@ -417,17 +427,9 @@ This leads us to the following question.
 
   \begin{example}[Consequences]
     We need the zero-knowledge property in our security definition.
-    (We actually need \emph{malicious}, not honest, verifier zero-knowledge.
+    (We actually need \emph{malicious}, not honest, verifier zero-knowledge.)
   \end{example}
 \end{frame}
-
-Now this depends on the users.
-Can they tell a benign verifier from an adversary?
-Turns out they can't\autocite{WhyPhishingWorks}.
-\Citeauthor{WhyPhishingWorks} actually found that users might actually test 
-whether the verifier is benign or not by entering their password:
-the reasoning was that if the is correct it will accept the password, otherwise 
-it will not (since it doesn't know the password)---which is a fallacy.
 
 We can also again turn to the wisdom of xkcd for another argument against the 
 benign verifier assumption, namely password reuse (\cref{xkcd792}).
@@ -445,6 +447,13 @@ benign verifier assumption, namely password reuse (\cref{xkcd792}).
   \end{figure}
 \end{frame}
 
+%\begin{frame}
+%  \begin{question}
+%    Are there more reasons?
+%    Password re-use, incompetent service, malicious service.
+%  \end{question}
+%\end{frame}
+
 \paragraph{Case study}
 
 We will study the paper by \textcite{WhyPhishingWorks} to explore how they 
@@ -460,9 +469,20 @@ So we'll return to this paper later.
   to inform our deductive (\eg cryptographic) choices.
 \end{frame}
 
-%\begin{frame}
-%  \begin{question}
-%    Are there more reasons?
-%    Password re-use, incompetent service, malicious service.
-%  \end{question}
-%\end{frame}
+\begin{frame}
+  \begin{question}[Is the opposite also true?]
+    Can deduction be a useful (necessary?) complement for empirical studies?
+    How?
+  \end{question}
+\end{frame}
+
+For instance, using a deductive approach we can rule out all those approaches 
+to passwords that are \emph{provably} easy to guess.
+There is no need to empirically test them, which takes time, if we already know 
+they're bad.
+
+\begin{frame}<presentation>
+  \begin{exercise}
+    What other aspects didn't we consider?
+  \end{exercise}
+\end{frame}
