@@ -1,0 +1,165 @@
+\title{%
+  How do you know it's secure?
+  Anonymous communication
+}
+\author{Daniel Bosk\thanks{%
+    This material is available under the Creative Commons 
+    Attribution-NonCommercial-ShareAlike (CC-BY-NC-SA) 4.0 international 
+    license.
+    The material was written with some aid from GitHub Copilot.
+}}
+\institute{%
+  KTH EECS
+}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\mode*
+
+\begin{abstract}
+  \input{abstract.tex}
+\end{abstract}
+
+\clearpage
+
+
+\section{Users get routed}
+
+\begin{frame}
+  \begin{question}[Users get routed]
+    \begin{itemize}
+      \item What was the research question?
+      \item What methods did they use?
+      \item Why is that a good method?
+      \item Can we use another method?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}
+  \begin{solution}[What was the research question?]
+    \begin{itemize}
+      \item How susceptible are \alert<2>{typical} users to attacks by 
+        \alert<2>{reasonably realistic} adversaries?
+    \end{itemize}
+  \end{solution}
+
+  \begin{uncoverenv}<2>
+  \begin{question}
+    \begin{itemize}
+      \item What is a \enquote{typical} user?
+      \item What is \enquote{reasonably realistic}?
+    \end{itemize}
+  \end{question}
+  \end{uncoverenv}
+\end{frame}
+
+\begin{frame}
+  \begin{solution}[What methods did they use?]
+    \begin{itemize}
+      \item They used a simulation.
+    \end{itemize}
+  \end{solution}
+
+  \begin{uncoverenv}<+>
+    \begin{question}
+      \begin{itemize}
+        \item Why is a simulation a good method?
+        \item How do the results relate to reality (validity)?
+      \end{itemize}
+    \end{question}
+  \end{uncoverenv}
+
+  \begin{uncoverenv}<+>
+    \begin{question}[\enquote{Typical} users]
+      \begin{itemize}
+        \item How well do the \enquote{typical} users match reality?
+        \item Do they have to?
+      \end{itemize}
+    \end{question}
+  \end{uncoverenv}
+\end{frame}
+
+
+\section{Shadow: Running Tor in a box}
+
+\begin{frame}
+  \begin{question}[Shadow: Running Tor in a box]
+    \begin{itemize}
+      \item What was the research question?
+      \item What methods did they use?
+      \item Why is that a good method?
+      \item Can we use another method?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}
+  \begin{question}
+    \begin{itemize}
+      \item They evaluate the quality of a research tool.
+      \item What are the challenges in doing that?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+
+\section{WF with Website Oracles}
+
+\begin{frame}
+  \begin{question}[WF with Website Oracles]
+    \begin{itemize}
+      \item What was the research question?
+      \item What methods did they use?
+      \item Why is that a good method?
+      \item Can we use another method?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}
+  \begin{question}
+    \begin{itemize}
+      \item<+> What type of contribution do we get from this paper?
+      \item<+> What is the Website Oracle? How do they show WOs exist in 
+        reality?
+      \item<+> How do they show WF+WO effect in reality?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+
+\section{Evaluating WF in Real World}
+
+\begin{frame}
+  \begin{question}[Evaluating WF in Real World]
+    \begin{itemize}
+      \item What was the research question?
+      \item What methods did they use?
+      \item Why is that a good method?
+      \item Can we use another method?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}
+  \begin{question}
+    \begin{itemize}
+      \item They complained about the evaluation of WF in other papers.
+        What was the problem?
+      \item Are there any problems with this paper's approach?
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}
+  \begin{remark}[Problems]
+    \begin{itemize}
+      \item Didn't test WF+WO paper's approach in this new setting.
+      \item Papers like WF+WO must use same approach as papers they compare 
+        with.
+    \end{itemize}
+  \end{remark}
+\end{frame}

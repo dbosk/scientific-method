@@ -103,7 +103,7 @@ We find this particularly necessary after reading the quotes in
 
 The requirements for Master's level are set out in 
 \citetitle{HEO2}~\autocite{HEO2}, namely:
-\begin{frame}[fragile]
+%\begin{frame}[fragile]
   \begin{block}{Master's goals: Knowledge and understanding~\autocite{HEO2}}
     \only<article>{\begin{enumerate}[label={(K\arabic*)},ref=K\arabic*]}
     \only<presentation>{\begin{itemize}}
@@ -117,9 +117,9 @@ The requirements for Master's level are set out in
     \only<article>{\end{enumerate}}
     \only<presentation>{\end{itemize}}
   \end{block}
-\end{frame}
+%\end{frame}
 
-\begin{frame}[fragile]
+%\begin{frame}[fragile]
   \begin{block}{Master's goals: Competence and skills~\autocite{HEO2}}
     \only<article>{\begin{enumerate}[label={(C\arabic*)},ref=C\arabic*]}
     \only<presentation>{\begin{itemize}}
@@ -139,9 +139,9 @@ The requirements for Master's level are set out in
     \only<presentation>{\end{itemize}}
     \only<article>{\end{enumerate}}
   \end{block}
-\end{frame}
+%\end{frame}
 
-\begin{frame}[fragile]
+%\begin{frame}[fragile]
   \begin{block}{Master's goals: Judgement and approach~\autocite{HEO2}}
     \only<article>{\begin{enumerate}[label={(J\arabic*)},ref=J\arabic*]}
     \only<presentation>{\begin{itemize}}
@@ -154,7 +154,7 @@ The requirements for Master's level are set out in
     \only<presentation>{\end{itemize}}
     \only<article>{\end{enumerate}}
   \end{block}
-\end{frame}
+%\end{frame}
 
 \paragraph{Intended learning outcomes}\label{LearningOutcomes}
 
@@ -184,7 +184,19 @@ The requirements for Master's level are set out in
   in order to be able to contribute to scientifically based development.
 \end{frame}
 
-\subsection{Prerequisites}
+There are also two learning outcomes related more to general skill, rather than 
+scientific method:
+\begin{frame}[fragile]
+  After passing the course, the student should be able to
+  \begin{itemize}
+    \item plan and carry out assignments within given time frames and using 
+      available resources, and
+    \item write short, clear and arguing texts based on own analysis as well as 
+      given material.
+  \end{itemize}
+\end{frame}
+
+\subsection<article>{Prerequisites}
 
 The course requires some prerequisites.
 In the area of cybersecurity, the student should be able to:
@@ -311,6 +323,16 @@ Knowledge dissemination is about communicating results to others.
 And in science, to convince others that one's results are correct.
 We can see this aspect in \ref{LOcomm} (and \ref{Ccomm}) and we will see this 
 aspect as part of the assessment of the course later.
+
+\begin{frame}
+  \begin{block}{Concrete goals}
+    \begin{itemize}
+      \item Ask good questions.
+      \item Use suitable methods to answer them.
+      \item Evaluate the suitability of proposed methods.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 
 \subsection{Teaching design}
@@ -531,7 +553,14 @@ The final seminar summarizes the course and results in a grade.
 
 \mode<presentation>{%
 \begin{frame}
-  \begin{block}{Assessment}
+  \begin{block}{Teaching}<+>
+    \begin{itemize}
+      \item Reading material and watching videos.
+      \item Discuss and work with material at synchronous seminars.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Assessment}<+>
     \begin{itemize}
       \item A synchronous seminar to summarize all work and tie the sack.
     \end{itemize}
@@ -542,6 +571,7 @@ The final seminar summarizes the course and results in a grade.
   \begin{block}{Giving the course}
     \begin{enumerate}
       \item Given every period; yes, four times per year.
+      \item If you don't finish, you can try again next period.
     \end{enumerate}
   \end{block}
 \end{frame}
@@ -638,17 +668,26 @@ We'll depart in the paper
 \end{frame}
 }
 
-%\begin{frame}
-%  \begin{block}{Contents, part II}
-%    \begin{itemize}
-%      \item General introductions to various subfields.
-%      \item Which methods are used and why?
-%      \item Some exemplary papers? \alert<2>{Both good and bad!}
-%      \item How does a subfield fit into the holistic picture of Security?
-%    \end{itemize}
-%  \end{block}
-%\end{frame}
-%
+\begin{frame}
+  \begin{block}{Contents, part II}
+    \begin{itemize}
+      \item General introductions to various subfields.
+      \item Which methods are used and why?
+      %\item Some exemplary papers? \alert<2>{Both good and bad!}
+      \item How does a subfield fit into the holistic picture of Security?
+      \item How can these methods fit into other situations?
+    \end{itemize}
+  \end{block}
+
+  \begin{exercise}
+    \begin{itemize}
+      \item What is an area or problem that you're interested in (in security)?
+      \item Think of an interesting case that you can reflect on during the 
+        course.
+    \end{itemize}
+  \end{exercise}
+\end{frame}
+
 %\begin{frame}
 %  \begin{remark}
 %    \begin{itemize}
@@ -692,13 +731,42 @@ This will assess all the learning outcomes: \cref{%
   LOrelate,LOcomm,LOplan,LOapply,LOevaluate%
 }.
 
+\begin{frame}<presentation>
+  \begin{block}{Final assessment}
+    \begin{itemize}
+      \item Design a research method for a given set of research questions.
+      \item Assess the suitability of the method.
+      \item Motivate the choices of methods.
+      \item Explain why the methods answer the questions.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 You'll do this by writing a report motivating your choices of methods and 
 explaining why they answer the question.
 You'll also present this report at the final seminar.
 Someone else will review the report, and you will review someone else's report 
 too.
 
+\begin{frame}<presentation>
+  \begin{block}{Final seminar and review}
+    \begin{itemize}
+      \item Present this at the final seminar.
+      \item Review someone else's report.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 The final assessment will be done in pairs.
+
+\begin{frame}<presentation>
+  \begin{remark}
+    \begin{itemize}
+      \item The final assessment will be done in pairs.
+      \item Up to three in a group is allowed.
+    \end{itemize}
+  \end{remark}
+\end{frame}
 
 %\begin{frame}[allowframebreaks]
 %  \begin{block}{Assessment}
@@ -720,13 +788,24 @@ The final assessment will be done in pairs.
 %  \end{block}
 %\end{frame}
 
-\begin{frame}<presentation>
-  \begin{question}
-    \begin{itemize}
-      \item Comments, questions, other thoughts?
-    \end{itemize}
-  \end{question}
+%\begin{frame}<presentation>
+%  \begin{question}
+%    \begin{itemize}
+%      \item Comments, questions, other thoughts?
+%    \end{itemize}
+%  \end{question}
+%\end{frame}
+
+\begin{onlyenv}<presentation>
+\section{The material}
+
+\begin{frame}[fragile]
+  \begin{center}
+    \huge
+    Canvas
+  \end{center}
 \end{frame}
+\end{onlyenv}
 
 
 %%% REFERENCES %%%
