@@ -55,20 +55,23 @@ Consider the following examples.
 
 \begin{frame}[fragile]
   \begin{example}\label{SoKProblem1}
-      \textcquote[\S IV]{SecurityAsAScience}{\textins*{C}laims of necessary 
-        conditions for real-world security are unfalsifiable.
-      Claims of necessary conditions for formally-defined security are 
-    tautological restatements of the assumptions}.
+      \textcquote[\S IV]{SecurityAsAScience}{%
+        \textins*{C}laims of necessary conditions for real-world security are 
+        unfalsifiable.
+        Claims of necessary conditions for formally-defined security are 
+        tautological restatements of the assumptions.%
+      }
   \end{example}
 
   \pause
 
   \begin{example}\label{SoKProblem2}
     \textcquote{SecurityAsAScience}{%
-      Unfalsifiable claims are common in security---and they, along with circular 
-      arguments, are used to justify many defensive measures \textelp{}
-      \textins{T}here are many ways to argue measures in, but no way to argue one 
-      out.
+      Unfalsifiable claims are common in security---and they, along with 
+      circular arguments, are used to justify many defensive measures 
+      \textelp{}
+      \textins{T}here are many ways to argue measures in, but no way to argue 
+      one out.%
     }
   \end{example}
 \end{frame}
@@ -258,7 +261,7 @@ security research.
 \begin{frame}<presentation>
   \begin{example}[\enquote{Provable security}]
     \begin{itemize}
-      \item A uniformly random string of length \(n\) is the most secure 
+      \item A uniformly random string of length \(n\) is secure to use as a 
         password.
 
       \item We can prove it will take millions of years to guess it.
@@ -275,7 +278,7 @@ security research.
 \end{frame}
 
 \begin{example}[\enquote{Provable security}]\label{SecurePassword}
-  A uniformly random string of length \(n\) is the most secure password.
+  A uniformly random string of length \(n\) is secure to use as a password.
   We can prove it will take millions of years to guess it.
 \end{example}
 
@@ -442,6 +445,7 @@ you on the last one.
 
 \begin{figure}[t]
   \begin{fullwidth}
+  \centering
   \subbottom[%
   An interactive document in FeedbackFruits where one can answer quiz questions 
   posed in the document and ask questions about the content.%
