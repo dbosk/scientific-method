@@ -16,7 +16,7 @@ notes.pdf: ${SRC} ${DEPENDS} ${FIGS}
 slides.pdf: slides.tex
 slides.pdf: ${SRC} ${DEPENDS} ${FIGS}
 
-objectives.tex: ../../course-design/objectives.tex
+objectives.tex: ../00-intro/objectives.tex
 
 ${DEPENDS}:
 	${LN} $< $@
