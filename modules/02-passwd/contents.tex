@@ -162,6 +162,11 @@ This reference serves two purposes:
     Otherwise, we're plagiarizing.
   \item It shows that we're not the only ones using this definition.
     All works using the same definition can easily be compared.
+    That makes our work more valuable\footnote{%
+      But, of course, it depends on the purpose of our work.
+      If our work is to improve the definition of security for some property, 
+      then, of course, we can't keep the same definition.
+    }.
 \end{enumerate}
 
 \paragraph{Case studies on literature reviews}
@@ -192,14 +197,15 @@ possibilities for the details.
   The authentication system is \emph{secure} if it is \emph{hard} for an 
   adversary to authenticate a false claim.
   We let the \emph{security level} of an authentication system be the inverse 
-  probability of a successful attack.
+  probability of successfully proving a false claim (an attack).
 \end{definition}
 \end{frame}
 
 Now, that captures the essence of what we want.
 However, we just reduced the problem of defining \enquote{being secure} to 
 defining what \enquote{hard} means.
-This leads us down the path of formal security, \eg using complexity theory.
+We could use, \eg, computational complexity theory (cryptography) or risk-based 
+assessment.
 
 \begin{exercise}
   Search for a suitable formal definition of security for an authentication 
@@ -295,8 +301,8 @@ password.
     We see that the probability of guessing a password is \(\frac{1}{N^n}\).
     This is negligible (\cref{Negligible}), so we have soundness 
     (\cref{FormalSecurity}).
-    (Completeness is straightforward, the verifier will accept if the password 
-    is correct.)
+    (Completeness is straightforward, the verifier will accept only if the 
+    password is correct.)
   \end{proof}
 \end{frame}
 
@@ -308,13 +314,14 @@ password.
   \end{exercise}
 
   \begin{solution}
-    We can try forcing some user-generated passwords.
-
-    We've assumed that the passwords are uniformly distributed.
+    (1) We can try forcing some user-generated passwords.
+    (2) We've assumed that the passwords are uniformly distributed.
     But are they?
     How can we find out?
   \end{solution}
 \end{frame}
+
+This illustrates the gap between a model and reality.
 
 \subsection{Empirical evaluation}
 
@@ -370,9 +377,10 @@ so we'll return to them.
 However, we can do other estimates deductively too.
 For instance, we have the very famous \enquote{correct horse battery staple} 
 from xkcd (\cref{xkcd936}).
-If we can estimate the password distribution by knowing the password policy.
+We can estimate the password distribution by knowing the password policy.
 However, we still have \cref{AssumeUniform}, it's just distributed uniformly 
 within the bounds of the password policy.
+We don't know how people choose passwords without looking at exactly that.
 
 \begin{frame}
   \begin{figure}[h]
@@ -395,16 +403,17 @@ within the bounds of the password policy.
 
 \begin{frame}
   \begin{exercise}
-    Is this a good model/definition of security?
+    Is \cref{FormalSecurity} a good model/definition of security?
     What questions should we ask?
     How can we answer them?
   \end{exercise}
 \end{frame}
 
 Well, our model says that the verifier is benign.
-We have no requirement that the verifier should not be able to learn the 
-password.
+That means, we have no requirement that the verifier should not be able to 
+learn the password.
 So we have to assume that the verifier will never act as an adversary.
+We must ultimately trust any verifier.
 This leads us to the following question.
 
 \begin{frame}
@@ -419,10 +428,13 @@ Can they tell a benign verifier from an adversary?
 Turns out they can't\autocite{WhyPhishingWorks}.
 \Citeauthor{WhyPhishingWorks} actually found that users might actually test 
 whether the verifier is benign or not by entering their password:
-the reasoning was that if the is correct it will accept the password, otherwise 
-it will not (since it doesn't know the password)---which is a fallacy.
-This tells us that we need to consider the verifier as an adversary, 
-consequently we need a zero-knowledge property in \cref{FormalSecurity}.
+the reasoning was that if the verifier is correct it will accept the password, 
+otherwise it will not (since it doesn't know the password)---which is a 
+fallacy.
+This\footnote{%
+  And the fact that we know of phishing, skimming, and other attacks.
+} tells us that we need to consider the verifier as an adversary, consequently 
+we need a zero-knowledge property (or similar) in \cref{FormalSecurity}.
 
 \begin{frame}<presentation>
   \begin{example}
@@ -472,11 +484,16 @@ So we'll return to this paper later.
 \begin{frame}
   We might need a qualitative (\eg usability) study
   \only<presentation>{\newline}%
+  to inform an inductive study
+  \only<presentation>{\newline}%
   to inform our deductive (\eg cryptographic) choices.
+  \only<presentation>{\newline}%
+  Which, in turn, affects future qualitative and inductive studies.
 \end{frame}
 
 \begin{frame}
   \begin{question}[Is the opposite also true?]
+    How do qualitative, empirical and deductive methods fit together?
     Can deduction be a useful (necessary?) complement for empirical studies?
     How?
   \end{question}
