@@ -1,5 +1,5 @@
 .PHONY: all
-all: notes.pdf slides.pdf
+all: notes.pdf slides.pdf seminar-slides.pdf
 
 LATEXFLAGS+=	-shell-escape
 
@@ -15,6 +15,8 @@ notes.pdf: ${SRC} ${DEPENDS} ${FIGS}
 
 slides.pdf: slides.tex
 slides.pdf: ${SRC} ${DEPENDS} ${FIGS}
+
+seminar-slides.pdf: seminar-slides.tex seminar.tex
 
 objectives.tex: ../00-intro/objectives.tex
 
