@@ -37,5 +37,9 @@ do
   then
     canvaslms grade -c ${course} -a "Live seminar ${seminar_date}" \
       -u $user -g complete
+  else
+    canvaslms grade -c ${course} -a "Live seminar ${seminar_date}" \
+      -u $user -g incomplete \
+      -m "You had $minutes minutes of participation out of more than $limit_minutes minutes."
   fi
 done
