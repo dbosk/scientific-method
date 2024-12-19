@@ -1,0 +1,30 @@
+NOWEAVEFLAGS=-delay
+LATEXFLAGS=-shell-escape
+
+.PHONY: all
+all: vetcyb-grading.pdf vetcyb-grading.sh
+
+.INTERMEDIATE: vetcyb-grading.tex
+vetcyb-grading.pdf: vetcyb-grading.tex
+vetcyb-grading.sh: vetcyb-grading.sh.nw
+
+GRADE_RESULTS=test-grade_reflections-err.txt
+
+vetcyb-grading.pdf: ${GRADE_RESULTS}
+vetcyb-grading.pdf: ./instruction-qualitative.md ./submission-qualitative.md
+
+${GRADE_RESULTS}: test-grade-reflections.sh
+	bash $<
+
+test-grade-reflections.sh: vetcyb-grading.sh.nw vetcyb-grading.sh
+	${NOTANGLE.sh}
+
+.PHONY: clean
+clean:
+	${RM} vetcyb-grading.pdf vetcyb-grading.sh
+	rm *.aux *.fdb_* *.fls *.log *.pdf *.tex
+
+
+INCLUDE_MAKEFILES=../../makefiles
+include ${INCLUDE_MAKEFILES}/noweb.mk
+include ${INCLUDE_MAKEFILES}/tex.mk
