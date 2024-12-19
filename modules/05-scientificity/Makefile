@@ -1,5 +1,5 @@
 .PHONY: all
-all: notes.pdf slides.pdf
+all: notes.pdf slides.pdf seminar-slides.pdf
 
 LATEXFLAGS+=	-shell-escape
 
@@ -14,6 +14,8 @@ notes.pdf: ${SRC} ${DEPENDS} ${FIGS}
 slides.pdf: slides.tex
 slides.pdf: ${SRC} ${DEPENDS} ${FIGS}
 
+seminar-slides.pdf: seminar-slides.tex seminar.tex ${SRC} ${DEPENDS} ${FIGS}
+
 objectives.tex: ../00-intro/objectives.tex
 
 ${DEPENDS}:
@@ -25,6 +27,7 @@ clean:
 	${RM} notes.pdf slides.pdf
 	${RM} ${DEPENDS}
 	${MAKE} -C fig clean
+	${RM} seminar-slides.pdf
 
 
 INCLUDE_MAKEFILES=../../makefiles
