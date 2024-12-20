@@ -870,6 +870,13 @@ We see that it is rejected four out of five times by both [[default]] and
 [[4o]] configurations.
 \inputminted[breaklines]{text}{./user1-statistics.md}
 
+Let's compare it to the instruction.
+\inputminted[breaklines]{markdown}{./instruction-statistics.md}
+
+And now compare to some accepted reflections.
+\inputminted[breaklines]{text}{./user5-statistics.md}
+\inputminted[breaklines]{text}{./user2-statistics.md}
+
 The final run gave the following fails:
 \begin{minted}{text}
 $ grade_reflections vetcyb24p2 $(canvaslms users -sc vetcyb24p2 | cut -f 2)
@@ -880,16 +887,16 @@ It briefly mentions statistics but quickly shifts focus to machine learning and
 cybersecurity without adequately reflecting on the use of statistics as 
 instructed.
 
-vetcyb24p2 maxengm@kth.se Reflection on Science in Security: No, the student 
+vetcyb24p2 user8@kth.se Reflection on Science in Security: No, the student 
 did not provide a reflection. The submission consists of a list of tasks and 
 activities related to security topics without any personal insights, analysis, 
 or reflection on the science in security.
 
-vetcyb24p2 maxengm@kth.se Reflection on qualitative methods: No. The student's 
+vetcyb24p2 user8@kth.se Reflection on qualitative methods: No. The student's 
 reflection focuses on quantitative aspects and usability testing rather than on 
 qualitative methods, which was the assignment's focus.
 
-vetcyb24p2 ronih@kth.se Reflection on Science in Security: No. The submission 
+vetcyb24p2 user9@kth.se Reflection on Science in Security: No. The submission 
 appears to be an analysis of specific security topics rather than a reflection 
 on Science in Security as requested by the assignment.
 \end{minted}
