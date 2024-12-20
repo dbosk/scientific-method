@@ -54,6 +54,7 @@ main() {
 
   # report INL1 to LADOK
   canvaslms results -c "${courses}" -A "${components}" \
+    -S canvaslms.grades.conjunctavgsurvey \
   | sed -E "s/ ?[HV]T[0-9]{2}( \(.*\))?//" \
   | ladok report -fv
 }
@@ -211,7 +212,8 @@ grade_participation() {
   do
     <<echo [[student]] if they passed both prep and live seminar>>
   done > "${passed}"
-  canvaslms grade -c "${course}" -A "${components}" -g P \
+  canvaslms grade -c "${course}" -a "${project_assignments_regex}" \
+    -g P \
     -u "$(make_regex ${passed})" \
     -m "${participation_msg}"
   <<give feedback to students not in [[passed]], who didn't pass>>
@@ -221,6 +223,13 @@ participation_msg="
 You did all prep and actively participated in all seminars. You don't have to 
 do the project.
 "
+@
+
+We must remember to set the grades for only the project assignments, not all 
+INL1 assignments.
+The INL1 assignments group also includes a survey.
+<<constants>>=
+project_assignments_regex="^(Peer review: Designing a methodology|The final seminar)"
 @
 
 The function [[make_regex]] simply takes the list of usernames [[user1]], 
@@ -473,7 +482,8 @@ do
   local feedback=$(feedback_participation "${course}" "${student}")
   if [ -n "${feedback}" ]
   then
-    canvaslms grade -c "${course}" -A "${components}" -u "${student}" \
+    canvaslms grade -c "${course}" -a "${project_assignments_regex}" \
+      -u "${student}" \
       -m "${feedback}"
   fi
 done
