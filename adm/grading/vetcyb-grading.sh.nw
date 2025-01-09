@@ -590,6 +590,13 @@ grade_reflections() {
 
 To create the regex, we can use the [[make_regex]] function.
 But that function requires a file containing all the students.
+So we'll write the students who need grading to a temporary file and use that.
+
+We also emphasize \emph{students who need grading}.
+Grading the reflections is, quite literally, an expensive operation.
+But we only grade reflections that are not already graded---see
+[[<<download reflection assignments submissions for [[students_regex]]>>]] just 
+below.
 <<let [[students_regex]] be a regex matching all [[students]] to grade>>=
 local students_file=$(mktemp)
 echo "${students}" | tr ' ' '\n' > "${students_file}"
@@ -598,7 +605,9 @@ rm "${students_file}"
 @
 
 To download the submissions, we can use the [[canvaslms submission]] command.
-We'll only download ungraded submissions.
+We'll only download ungraded submissions (by the [[-U]] option to 
+[[canvaslms]]).
+Consequently, we'll only grade submissions that haven't been graded yet.
 <<download reflection assignments submissions for [[students_regex]]>>=
 local reflections_dir="/tmp/${course}.reflections.d"
 <<let [[reflection_assign_regex]] be a regex matching all reflection assignments>>
