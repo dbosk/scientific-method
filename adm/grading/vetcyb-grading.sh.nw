@@ -79,10 +79,21 @@ don't have to do the final project.
 The INL1 assignment group contains the following assignments:
 \begin{verbatim}
 INL1	Peer review: Designing a methodology to answer a question
+INL1	Final version of the report for final seminar
 INL1	The final seminar on 8-9/1 at 8:15
+INL1	Course evaluation survey
 \end{verbatim}
-We want to set grades on those two assignments based on the participation and 
-prep.
+We want to set grades on the first three assignments based on the participation 
+and prep.
+We use a mandatory course evaluation to simply get a date.
+If the student finishes by participation, they will finish a few week earlier.
+CSN doesn't like this.
+So to get a date in the last week of the course, we'll let the students who 
+finish by participation to do the mandatory course evaluation survey then.
+That way we get a date in the last week of the course.
+Also, we get all the students to fill in the survey, instead of the usual two 
+students.
+
 The participation contains the following assignments:
 \begin{verbatim}
 Participation INL1	Overview of Science in Security
@@ -229,7 +240,7 @@ We must remember to set the grades for only the project assignments, not all
 INL1 assignments.
 The INL1 assignments group also includes a survey.
 <<constants>>=
-project_assignments_regex="^(Peer review: Designing a methodology|The final seminar)"
+project_assignments_regex="^(Peer review:|The final seminar|Final version of the report)"
 @
 
 The function [[make_regex]] simply takes the list of usernames [[user1]], 
